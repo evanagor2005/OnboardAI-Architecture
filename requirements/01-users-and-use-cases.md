@@ -49,6 +49,8 @@ Each **use case** is one task an actor tries to complete. The **trigger** is the
 | UC-08 | Invitation recipient | The person receives a team invitation email | Accept the invitation and choose a username and password | An account is created and associated with the invited team | The person sees that the invitation cannot be accepted or the account cannot be created | Yes — milestone 1 |
 | UC-09 | Employee transferring teams | The employee needs to move to a different team | Accept an invitation initiated by the destination team's admin or the superuser | The employee's team association changes to the destination team | The employee remains on the existing team if the transfer cannot be completed | Yes — development phase open |
 | UC-10 | Django superuser | A team needs an admin | Appoint an admin for the team | The appointed person has admin authority for that team | The superuser sees that the appointment did not succeed | Yes — milestone 1 |
+| UC-11 | Employee with an active onboarding path | The employee is working through a path and a relevant document changes | Continue the path | The path reflects the changed knowledge; if a completed step changed, the employee is told to revisit it | The employee sees that the update could not be applied | Yes — milestone 2 |
+| UC-12 | Employee with an active onboarding path | The employee finishes the path | Complete onboarding | The active generated path is removed | The employee sees that completion could not be recorded | Yes — milestone 2 |
 
 ## Journey questions
 
