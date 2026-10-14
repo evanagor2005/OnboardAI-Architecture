@@ -14,7 +14,7 @@
 | ID | The system shall... | Use case / SOW item | Prototype or future | How verified | Status |
 | --- | --- | --- | --- | --- | --- |
 | SR-DATA-001 | Associate ingested knowledge with its source and the team or teams to which it applies. | SOW milestones 1 and 3 | Prototype | Inspect indexed examples from two teams and trace them to their sources. | Draft |
-| SR-DATA-002 | Ingest documentation files from a GitHub repository first, then add a website or wiki as a second source. | SOW milestones 1 and 5 | Prototype | Ingest representative documents from the repository and website or wiki and trace results to both. | Draft |
+| SR-DATA-002 | Ingest Markdown documentation files from a public GitHub repository first, then add a website or wiki as a second source. | SOW milestones 1 and 5 | Prototype | Ingest Markdown files from the public repository and pages from the website or wiki, then trace results to both sources. | Draft — website/wiki access open |
 | SR-DATA-003 | Preserve source references for content used in onboarding and individual-topic paths. | UC-02, UC-04; SOW milestones 2 and 7 | Prototype | Trace path items back to their documents. | Draft |
 | SR-DATA-004 | Reflect changed or removed source documents in retrievable knowledge after the agreed refresh process. | SOW milestone 5 | Prototype | Change and remove test documents, refresh, and inspect retrieval results. | Draft — refresh timing open |
 | SR-DATA-005 | Distinguish team-specific knowledge from company-wide shared knowledge. | UC-02, UC-05; SOW milestones 3, 4, and 6 | Prototype | Inspect representative team and shared documents after ingestion. | Draft |
@@ -27,5 +27,5 @@
 
 | Data category | Source / owner | Sensitivity | Retention or deletion need | Scope |
 | --- | --- | --- | --- | --- |
-| Approved real documentation | GitHub repository or website/wiki; owner to identify | To classify before use | To define | Prototype evaluation |
+| Approved real documentation | Public GitHub Markdown repository or website/wiki; owner to identify | To classify before use | To define | Prototype evaluation |
 | Realistic sample documentation | Created by the project team | To define | To define | Prototype evaluation |
