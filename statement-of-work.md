@@ -48,6 +48,9 @@ What time, budget, team, data, privacy, hosting, course, or stakeholder constrai
 
 | Milestone | Exit condition | Owner | Date |
 | --- | --- | --- | --- |
+| 2. Dynamic software engineer onboarding path | The prototype creates and displays an onboarding path for a software engineer using its connected knowledge source, rather than a prewritten path. |  |  |
+
+**Open detail for milestone 2:** The team will decide when the path is generated or updated and whether individual employee information affects it at this stage.
 
 ## Acceptance and handoff
 
