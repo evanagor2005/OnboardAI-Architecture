@@ -28,7 +28,7 @@ The team will define the remaining completion evidence for each deliverable. Ind
 
 What time, budget, team, data, privacy, hosting, course, or stakeholder constraints govern the work? What must another party provide?
 
-**Team answer:** The prototype will use a mix of approved real documents and realistic sample documents. The first documentation source is a public GitHub repository containing Markdown files. Whether the second website or wiki requires sign-in remains undecided. The specific real-document approvals remain to be defined.
+**Team answer:** The prototype will use a mix of real documents approved by the project team and realistic sample documents. Its tested roles and topics are assumed to have at least some relevant documentation; generating a path with no relevant source material is outside the agreed prototype scenario. The first documentation source is a public GitHub repository containing Markdown files. Whether the second website or wiki requires sign-in remains undecided.
 
 **Dependency to confirm:** The company chatbot must allow the team to register the MCP. In the first iteration, all signed-in employees and admins may use it. The team still needs to define how access policies could be configured in a later iteration.
 
