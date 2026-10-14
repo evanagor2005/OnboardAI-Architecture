@@ -1,27 +1,25 @@
-# Architecture decision records
+# ADR — architecture rules
 
-Create one Markdown file per significant architecture choice after the team decides it. Use a numbered filename such as `0001-example-decision.md`.
+In this repository, ADR means the team's **architecture rules**: testable, technology-neutral statements describing what the architecture and its components shall guarantee. The team has not yet specified a longer expansion of the initials. These files are **not Architecture Decision Records**. Rationale for selected designs and technologies belongs in [`../design-decisions/`](../design-decisions/README.md).
 
-## Template
+Derive each rule from one or more [software requirements](../requirements/README.md). Use a stable ID such as `AR-DATA-001`. Write one obligation per **shall** statement, identify the responsible component or boundary, and specify how it will be verified. Do not name a database, framework, model, or cloud product in a rule unless that product is itself an approved constraint.
 
-```markdown
-# ADR-0000: Decision title
+## Rule groups
 
-**Status:** Proposed | Accepted | Superseded
-**Date:** YYYY-MM-DD
+| File | Architecture concern | Status |
+| --- | --- | --- |
+| [System boundaries](system-boundaries.md) | Ownership, separation, trust boundaries | Open |
+| [Knowledge lifecycle](knowledge-lifecycle.md) | Ingestion, provenance, updates, deletion | Open |
+| [Identity and access](identity-and-access.md) | Authentication, authorization, enforcement | Open |
+| [Data and persistence](data-and-persistence.md) | Stored information, integrity, queries, recovery | Open |
+| [Retrieval and answers](retrieval-and-answers.md) | Grounding, citations, uncertainty | Open |
+| [Onboarding](onboarding.md) | Paths, tutoring, progress, assessment if included | Open |
+| [Interfaces and MCP](interfaces-and-mcp.md) | Contracts and consistent behavior | Open |
+| [Operations](operations.md) | Observability, failure, cost, maintenance | Open |
 
-## Context
-What requirement or constraint creates this decision?
+## Rule format
 
-## Options considered
-What serious alternatives did the team compare?
+| ID | Shall statement | Source requirement(s) | Applies to | Verification method | Status |
+| --- | --- | --- | --- | --- | --- |
 
-## Decision
-What did the team choose, and why?
-
-## Consequences
-What benefits, costs, risks, and follow-up work result?
-
-## Validation or revisit trigger
-What evidence would cause the team to reconsider?
-```
+Statuses: Proposed, Accepted, Deferred, Superseded. A proposed statement is not an approved rule.
