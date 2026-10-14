@@ -14,11 +14,11 @@ Describe behavior visible at system boundaries. Leave endpoint names, frameworks
 
 | Interface | External actor or system | Required task | Inputs | Outputs / errors | Scope |
 | --- | --- | --- | --- | --- | --- |
-| Employee interface | Signed-in employee associated with one team | Select one team in the early prototype; request and follow a team or individually assigned path | Employee identity, selected team or later identity-linked role, path request or assignment | Path with source references, or an unavailable/denied result | Prototype |
-| Admin interface | Signed-in admin | Create a team and assign an individual topic | Admin identity, team details or employee and topic | Confirmation or failure | Prototype |
-| Company chatbot through MCP | Signed-in employee or admin using the chatbot | Retrieve permitted onboarding knowledge | Verified requester identity and question | Permitted source-backed content, or unavailable/denied result | Prototype; registration dependency |
+| Employee interface | Signed-in employee associated with one invited team | Request and follow a team or individually assigned path | Employee account and team association, path request or assignment | Path with source references, or an unavailable/denied result | Prototype |
+| Admin interface | Signed-in team admin | Create a team, invite a person to the admin's team, and assign an individual topic | Admin identity, team and recipient details, or employee and topic | Confirmation or failure | Prototype |
+| Company chatbot through MCP | Eligible chatbot user | Retrieve onboarding knowledge from scraped documents | Question; user eligibility rules to define | Source-backed content from any scraped document, or an unavailable result | First chatbot iteration; registration dependency |
 | Documentation ingestion | Connected documentation sources | Supply team knowledge | Source content and team association | Indexed knowledge or ingestion failure | Prototype |
-| Team invitation email | Admin, invitation recipient, and Mailgun | Send and accept an invitation to a specific team | Recipient email and destination team | Invitation email or delivery failure; acceptance flow | Prototype; phase open |
+| Team invitation email | Admin of destination team, invitation recipient, and Mailgun | Send and accept an invitation to a specific team | Recipient email and destination team | Invitation email or delivery failure; acceptance flow | Prototype; milestone 1 |
 
 ## Shall statements
 
@@ -26,8 +26,7 @@ Describe behavior visible at system boundaries. Leave endpoint names, frameworks
 | --- | --- | --- | --- | --- | --- |
 | SR-INT-001 | Let a signed-in employee associated with a team request an onboarding path through the employee interface. | Employee interface; UC-02 | Prototype | Request a path as a software employee and as an employee of another team. | Draft |
 | SR-INT-002 | Let an admin create a team and assign an individual topic through the admin interface. | Admin interface; UC-01, UC-03 | Prototype | Complete both tasks as an admin. | Draft |
-| SR-INT-003 | Make permitted, source-backed knowledge available to signed-in employees and admins through the registered company chatbot's MCP connection. | Company chatbot; UC-05 | Prototype | Ask the chatbot as an employee and as an admin; inspect sources and access behavior. | Draft |
-| SR-INT-004 | Present a one-team selection to an employee at the start of the early prototype. | Employee interface; UC-06 | Early prototype | Sign in and select one of the available teams. | Draft |
-| SR-INT-005 | Use the identity-linked team association in the employee interface after identity integration is introduced. | Employee interface; UC-06 | Later prototype phase | Sign in with a mapped account and confirm its team is used for onboarding. | Draft — identity provider undecided |
-| SR-INT-006 | Send team invitation emails through Mailgun to the intended recipient. | Invitation email; UC-07 | Prototype; phase open | Initiate an invitation and confirm Mailgun delivery and recipient details. | Draft |
-| SR-INT-007 | Let an invitation recipient accept the invitation and choose a username and password. | Invitation acceptance; UC-08 | Prototype; phase open | Complete an invitation and verify account creation. | Draft |
+| SR-INT-003 | Make source-backed knowledge from all scraped documents available through the registered company chatbot's MCP connection in its first iteration. | Company chatbot; UC-05 | First chatbot iteration | Request knowledge from two teams through the chatbot and inspect sources. | Draft — user eligibility open |
+| SR-INT-006 | Send team invitation emails through Mailgun to the intended recipient. | Invitation email; UC-07; SOW milestone 1 | Prototype | Initiate an invitation and confirm delivery to the test recipient. | Draft |
+| SR-INT-007 | Let an invitation recipient accept the invitation and choose a username and password. | Invitation acceptance; UC-08; SOW milestone 1 | Prototype | Complete an invitation and verify account creation. | Draft |
+| SR-INT-008 | Let a team admin initiate an invitation to that team through the admin interface. | Admin interface; UC-07; SOW milestone 1 | Prototype | Initiate an invitation to the admin's team and verify another team cannot be selected. | Draft |
