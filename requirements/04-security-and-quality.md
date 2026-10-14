@@ -17,10 +17,11 @@
 | SR-SEC-002 | In the employee interface, return team-specific knowledge only for the employee's invited team, plus company-wide shared knowledge. | SOW milestones 1 and 4 | No other team's team-specific content returned in the employee interface | Prototype | Repeat onboarding requests using employees invited to two different teams. | Draft |
 | SR-SEC-003 | Allow only admins to assign an individual learning topic to an employee. | UC-03; SOW milestone 7 | Admin role required | Prototype | Try assignment as an admin and as an employee. | Draft |
 | SR-SEC-004 | In the first company-chatbot integration, make all scraped documents available through the MCP to signed-in employees and admins regardless of their team. | UC-05; SOW milestone 6 | All scraped documents accessible to signed-in employees and admins | First chatbot iteration | Request documents from two teams using the chatbot. | Draft |
-| SR-SEC-006 | Prevent an employee from changing their team association without accepting an invitation initiated by an admin of the destination team. | UC-09 | No self-service team transfer | Prototype; phase open | Try direct team change, then complete an invited transfer. | Draft |
+| SR-SEC-006 | Prevent an employee from changing their team association without accepting an invitation initiated by the destination team's admin or the superuser. | UC-09 | No self-service team transfer | Prototype; phase open | Try direct team change, then complete an authorized invited transfer. | Draft |
 | SR-SEC-007 | Associate an invitation recipient's new account with the team named in the accepted invitation. | UC-08; SOW milestone 1 | Invitation determines initial team | Prototype | Accept an invitation and inspect the new account's team. | Draft |
 | SR-SEC-008 | Allow an admin to invite people only to teams that admin administers. | UC-07; SOW milestone 1 | No invitations to other admins' teams | Prototype | Attempt invitations to the admin's team and another team's roster. | Draft |
 | SR-SEC-009 | Allow the Django superuser to invite people to any team. | UC-07; SOW milestone 1 | No team restriction for the superuser's invitations | Prototype | As superuser, send invitations to two different teams. | Draft |
+| SR-SEC-010 | Allow only the Django superuser to appoint a team admin. | UC-10; SOW milestone 1 | Team-admin appointments require superuser authority | Prototype | Appoint a team admin as superuser; reject the same action from a team admin account. | Draft |
 
 **First chatbot iteration:** The chatbot and employee interface have different document access policies. The chatbot exposes all scraped documents to signed-in employees and admins; the employee interface exposes only the employee's team documents and company-wide shared documents. The team intends to consider configurable all-document or team-only chatbot access in a later iteration.
 
@@ -36,4 +37,6 @@
 | Admin | Assign an individual learning topic | Allow | SR-SEC-003 |
 | Admin of team A | Invite a person to team B | Deny | SR-SEC-008 |
 | Django superuser | Invite people to team A or team B | Allow | SR-SEC-009 |
+| Django superuser | Appoint a team admin | Allow | SR-SEC-010 |
+| Team admin | Appoint another team admin | Deny | SR-SEC-010 |
 | Employee | Change to another team without a new invitation | Deny after the initial team association | SR-SEC-006 |

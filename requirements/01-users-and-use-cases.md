@@ -19,8 +19,8 @@ Who uses, administers, supplies information to, or evaluates the prototype? Whic
 | Actor ID | Actor | Goal | Prototype / future | Notes |
 | --- | --- | --- | --- | --- |
 | EMP | Employee associated with one team | Accept a team invitation, request and follow that team's onboarding, and learn an assigned topic | Prototype | Team association is set by the accepted invitation; the employee cannot choose or switch teams directly. |
-| ADM | Team admin | Create or administer a team, invite an employee to the admin's team, and assign one employee a specific topic to learn | Prototype | Admins can also use the company chatbot. Whether a team creator automatically becomes its admin is open. |
-| SUPER | Django superuser | Hold the highest level of administration and invite someone to any team | Prototype | How team admins are first designated, and any other superuser actions, remain to be defined. |
+| ADM | Team admin | Create or administer a team, invite an employee to the admin's team, and assign one employee a specific topic to learn | Prototype | The superuser appoints team admins. Admins can also use the company chatbot. |
+| SUPER | Django superuser | Hold the highest level of administration, appoint team admins, and invite someone to any team | Prototype | Other superuser actions remain to be defined. |
 | CHAT | Company chatbot | Request source-backed knowledge from OnboardAI through the MCP | Prototype | In its first iteration, all signed-in employees and admins may use the chatbot to access all scraped documents. |
 | DOC | Documentation source | Supply team and company-wide shared knowledge for onboarding and individual topics | Prototype | The prototype starts with one source and later adds a different type of source. |
 
@@ -47,7 +47,8 @@ Each **use case** is one task an actor tries to complete. The **trigger** is the
 | UC-05 | Signed-in employee or admin using the company chatbot | The person asks the chatbot an onboarding question | Request OnboardAI knowledge through the chatbot | In the first iteration, the chatbot receives source-backed knowledge from the scraped documents regardless of team | The chatbot communicates when the knowledge or MCP is unavailable | Yes — milestone 6 |
 | UC-07 | Django superuser or team admin | A person needs to join a team | Invite the person by email to join that team; a team admin chooses only a team they administer | The person receives an invitation email naming the team | The inviter sees that the invitation could not be sent or that they cannot invite to the chosen team | Yes — milestone 1 |
 | UC-08 | Invitation recipient | The person receives a team invitation email | Accept the invitation and choose a username and password | An account is created and associated with the invited team | The person sees that the invitation cannot be accepted or the account cannot be created | Yes — milestone 1 |
-| UC-09 | Employee transferring teams | The employee needs to move to a different team | Accept an invitation initiated by an admin of the destination team | The employee's team association changes to the destination team | The employee remains on the existing team if the transfer cannot be completed | Yes — development phase open |
+| UC-09 | Employee transferring teams | The employee needs to move to a different team | Accept an invitation initiated by the destination team's admin or the superuser | The employee's team association changes to the destination team | The employee remains on the existing team if the transfer cannot be completed | Yes — development phase open |
+| UC-10 | Django superuser | A team needs an admin | Appoint an admin for the team | The appointed person has admin authority for that team | The superuser sees that the appointment did not succeed | Yes — milestone 1 |
 
 ## Journey questions
 
