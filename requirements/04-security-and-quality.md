@@ -18,6 +18,8 @@
 | SR-SEC-003 | Allow only admins to assign an individual learning topic to an employee. | UC-03; SOW milestone 7 | Admin role required | Prototype | Try assignment as an admin and as an employee. | Draft |
 | SR-SEC-004 | Apply the requesting person's access rules to company chatbot results. | UC-05; SOW milestone 6 | Same allowed content as the employee interface | Prototype | Compare chatbot and employee-interface results for representative accounts. | Draft |
 | SR-SEC-005 | Use the employee's selected team as their team association for knowledge filtering in the early prototype. | UC-06; SOW milestone 1 | Selected team and shared content only | Early prototype | Select team A, then check that team A and shared documents are available while team B documents are absent. | Draft |
+| SR-SEC-006 | Prevent an employee from changing their team association without accepting an invitation initiated by an admin of the destination team. | UC-09 | No self-service team transfer | Prototype; phase open | Try direct team change, then complete an invited transfer. | Draft — inviting admin scope open |
+| SR-SEC-007 | Associate an invitation recipient's new account with the team named in the accepted invitation. | UC-08 | Invitation determines initial team | Prototype; phase open | Accept an invitation and inspect the new account's team. | Draft |
 
 **Early prototype limitation:** Team selection is self-declared. It filters knowledge by the selected team, but does not independently verify the employee's real organizational membership. The later identity integration is intended to provide that association from authenticated role information.
 
@@ -32,3 +34,4 @@
 | Employee associated with team A | Team B team-specific knowledge | Deny in employee interface and chatbot | SR-SEC-002, SR-SEC-004 |
 | Employee | Assign an individual learning topic | Deny | SR-SEC-003 |
 | Admin | Assign an individual learning topic | Allow | SR-SEC-003 |
+| Employee | Change to another team without a new invitation | Deny after the initial team association | SR-SEC-006 |

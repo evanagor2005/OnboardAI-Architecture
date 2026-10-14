@@ -18,6 +18,7 @@ Describe behavior visible at system boundaries. Leave endpoint names, frameworks
 | Admin interface | Signed-in admin | Create a team and assign an individual topic | Admin identity, team details or employee and topic | Confirmation or failure | Prototype |
 | Company chatbot through MCP | Signed-in employee or admin using the chatbot | Retrieve permitted onboarding knowledge | Verified requester identity and question | Permitted source-backed content, or unavailable/denied result | Prototype; registration dependency |
 | Documentation ingestion | Connected documentation sources | Supply team knowledge | Source content and team association | Indexed knowledge or ingestion failure | Prototype |
+| Team invitation email | Admin, invitation recipient, and Mailgun | Send and accept an invitation to a specific team | Recipient email and destination team | Invitation email or delivery failure; acceptance flow | Prototype; phase open |
 
 ## Shall statements
 
@@ -28,3 +29,5 @@ Describe behavior visible at system boundaries. Leave endpoint names, frameworks
 | SR-INT-003 | Make permitted, source-backed knowledge available to signed-in employees and admins through the registered company chatbot's MCP connection. | Company chatbot; UC-05 | Prototype | Ask the chatbot as an employee and as an admin; inspect sources and access behavior. | Draft |
 | SR-INT-004 | Present a one-team selection to an employee at the start of the early prototype. | Employee interface; UC-06 | Early prototype | Sign in and select one of the available teams. | Draft |
 | SR-INT-005 | Use the identity-linked team association in the employee interface after identity integration is introduced. | Employee interface; UC-06 | Later prototype phase | Sign in with a mapped account and confirm its team is used for onboarding. | Draft — identity provider undecided |
+| SR-INT-006 | Send team invitation emails through Mailgun to the intended recipient. | Invitation email; UC-07 | Prototype; phase open | Initiate an invitation and confirm Mailgun delivery and recipient details. | Draft |
+| SR-INT-007 | Let an invitation recipient accept the invitation and choose a username and password. | Invitation acceptance; UC-08 | Prototype; phase open | Complete an invitation and verify account creation. | Draft |

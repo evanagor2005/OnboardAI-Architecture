@@ -19,7 +19,8 @@ Who uses, administers, supplies information to, or evaluates the prototype? Whic
 | Actor ID | Actor | Goal | Prototype / future | Notes |
 | --- | --- | --- | --- | --- |
 | EMP | Employee associated with one team | Select a team at the start, request and follow that team's onboarding, and learn an assigned topic | Prototype | Early prototype: selecting one team immediately establishes the employee's team association. Later UI/UX phase: the association comes from the role linked to the employee's identity. |
-| ADM | Admin | Create a team and assign one employee a specific topic to learn | Prototype | Admins can also use the company chatbot. |
+| ADM | Admin | Create a team, invite an employee to join a team, and assign one employee a specific topic to learn | Prototype | Admins can also use the company chatbot; which admins may invite to a particular team is open. |
+| SUPER | Django superuser | Hold the highest level of administration | Prototype | Specific superuser actions beyond this authority level remain to be defined. |
 | CHAT | Company chatbot | Request permitted, source-backed knowledge from OnboardAI through the MCP | Prototype | All signed-in employees and admins may use it; company integration is a dependency. |
 | DOC | Documentation source | Supply team and company-wide shared knowledge for onboarding and individual topics | Prototype | The prototype starts with one source and later adds a different type of source. |
 
@@ -40,11 +41,14 @@ Each **use case** is one task an actor tries to complete. The **trigger** is the
 | Use case ID | Actor | Trigger (why now?) | Task | Successful result | If it cannot work | In prototype? |
 | --- | --- | --- | --- | --- | --- | --- |
 | UC-01 | Admin | A team needs to be represented in OnboardAI | Create a team | The team is available for team-based onboarding | The admin sees that creation did not succeed | Yes — milestone 1 |
-| UC-02 | Employee associated with a team | The employee is starting onboarding | Request a team onboarding path | A path is created on request from knowledge relevant to that team, with source references | The employee sees that a path could not be created from available, permitted knowledge | Yes — milestones 2 and 4 |
+| UC-02 | Employee associated with a team | The employee is starting onboarding | Request a team onboarding path | A path is created on request from knowledge relevant to that team, with ordered steps, summaries, and source links | The employee sees that a path could not be created from available, permitted knowledge | Yes — milestones 2 and 4 |
 | UC-03 | Admin | One employee needs to learn a specific documented topic | Assign that topic to the employee | The assignment is associated with the intended employee | The admin sees that the assignment did not succeed | Yes — milestone 7 |
 | UC-04 | Employee with an assigned topic | The employee is ready to learn the assigned topic | Open the individual learning path | The employee sees a path tied to relevant hub documents | The employee sees that the path is unavailable or lacks permitted source material | Yes — milestone 7 |
 | UC-05 | Signed-in employee or admin | The person asks the chatbot an onboarding question | Request OnboardAI knowledge through the chatbot | The chatbot receives knowledge and sources permitted for that person | The chatbot receives no restricted content and communicates when access or knowledge is unavailable | Yes — milestone 6 |
 | UC-06 | Employee | The employee enters the early prototype for the first time | Select one team | The selected team immediately becomes the employee's team; that team's and company-wide shared documents can be used for onboarding | The employee sees that a valid team must be selected | Yes — early prototype; later replaced by identity-based association |
+| UC-07 | Admin | A person needs to join a specific team | Invite the person by email to join that team | The person receives an invitation email naming the team | The admin sees that the invitation could not be sent | Yes — development phase open |
+| UC-08 | Invitation recipient | The person receives a team invitation email | Accept the invitation and choose a username and password | An account is created and associated with the invited team | The person sees that the invitation cannot be accepted or the account cannot be created | Yes — development phase open |
+| UC-09 | Employee transferring teams | The employee needs to move to a different team | Accept an invitation initiated by an admin of the destination team | The employee's team association changes to the destination team | The employee remains on the existing team if the transfer cannot be completed | Yes — development phase open |
 
 ## Journey questions
 

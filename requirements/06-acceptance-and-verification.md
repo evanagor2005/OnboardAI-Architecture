@@ -22,6 +22,9 @@ Decide what will count as a successful prototype before interpreting test result
 | AC-06 | Human testing produces evidence for onboarding speed, knowledge retention, and knowledge application. | Statement-of-work outcomes | Evaluation results using the measures and targets defined in the design evaluation plan. | Draft |
 | AC-07 | An employee selects exactly one team in the early prototype and immediately receives that team's and shared knowledge; after identity integration, the employee's team comes from their authenticated identity. | SR-FUNC-009, SR-FUNC-010, SR-FUNC-011, SR-SEC-005 | Demonstrations of early selection with another team's documents excluded and later identity-based team association. | Draft |
 | AC-08 | Team onboarding and chatbot retrieval can use both the employee's team knowledge and company-wide shared knowledge. | SR-DATA-005, SR-DATA-006 | Representative team and shared documents appear in permitted results. | Draft |
+| AC-09 | A generated learning path contains ordered steps, each with a summary and a working source link. | SR-FUNC-012, SR-DATA-003 | Inspect generated team and individual-topic paths and open their source links. | Draft |
+| AC-10 | An admin sends a team invitation through Mailgun; the recipient accepts, chooses credentials, and receives an account associated with the invited team. | SR-FUNC-013, SR-FUNC-014, SR-INT-006, SR-INT-007, SR-SEC-007 | Invitation email, acceptance flow, and created account with the expected team. | Draft — phase open |
+| AC-11 | An employee cannot switch teams directly; a transfer succeeds after a destination-team admin invitation and the employee's acceptance. | SR-FUNC-015, SR-SEC-006 | Failed direct-change attempt and completed invited transfer. | Draft — phase open |
 
 ## Requirement coverage
 
