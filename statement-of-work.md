@@ -32,8 +32,11 @@ Which user groups, roles, knowledge sources, journeys, and interfaces are includ
 
 | Deliverable ID | Deliverable | Reviewable evidence | Owner | Due date |
 | --- | --- | --- | --- | --- |
+| DEL-001 | Team-based onboarding | To define |  |  |
+| DEL-002 | MCP registered with the company chatbot | To define |  |  |
+| DEL-003 | Individual-based learning | To define |  |  |
 
-Consider the prototype, representative data, requirements, architecture, design, tests, evaluation, and demonstration. Include only deliverables the team accepts.
+The team will define what each deliverable includes and what evidence demonstrates its completion. In particular, the scope of individual-based learning remains open.
 
 ## Constraints and dependencies
 
