@@ -1,6 +1,6 @@
 # Evaluation and verification plan
 
-Plan how to prove the accepted [requirements](../requirements/06-acceptance-and-verification.md) and [architecture rules](../adr/README.md) are met. Actual results are recorded after tests run.
+Plan how to prove the accepted [requirements](../requirements/06-acceptance-and-verification.md), [architecture rules](../adr/README.md), and [statement-of-work outcomes](../statement-of-work.md) are met. Actual results are recorded after tests run.
 
 ## Questions
 
@@ -9,17 +9,20 @@ Plan how to prove the accepted [requirements](../requirements/06-acceptance-and-
 - How will answer correctness, grounding, citations, access control, and onboarding usefulness be judged?
 - What failure, update, recovery, and cost cases need testing?
 - What baseline or comparison is feasible?
-- Who judges the results, and what finding would cause a design change?
+- What finding would cause a design change?
 
 ## Test matrix
 
-| Test ID | Requirement / rule ID | Scenario | Expected result | Method | Evidence location | Owner | Status |
-| --- | --- | --- | --- | --- | --- | --- | --- |
+| Test ID | Requirement / rule ID | Scenario | Expected result | Method | Evidence location | Status |
+| --- | --- | --- | --- | --- | --- | --- |
 
 ## Success measures
 
-| Measure | Definition | Target | Data collection method | Reviewer |
-| --- | --- | --- | --- | --- |
+| Measure | Definition | Target | Data collection method |
+| --- | --- | --- | --- |
+| Onboarding speed | Time needed to complete comparable onboarding tasks | To define | To define |
+| Knowledge retention | Results of a later check on onboarding knowledge | To define | To define |
+| Knowledge application | Ability to use onboarding knowledge in a role-relevant task | To define | To define |
 
 ## Results and limitations
 
