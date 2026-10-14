@@ -22,9 +22,9 @@ The team plans to complete all three deliverables through the development phases
 | --- | --- | --- | --- | --- |
 | DEL-001 | Team-based onboarding | To define |  |  |
 | DEL-002 | MCP registered with the company chatbot | To define |  |  |
-| DEL-003 | Individual-based learning | To define |  |  |
+| DEL-003 | Individual-based learning on a specific topic in the documentation hub | One employee can access a learning path for a specific topic drawn from the hub's documents. |  |  |
 
-The team will define what evidence demonstrates completion of each deliverable. The details of individual-based learning remain to be defined.
+The team will define the remaining completion evidence for each deliverable. Individual-based learning means enabling one person to learn a specific topic contained in the documentation hub; it does not require an adaptive learning system.
 
 ## Constraints and dependencies
 
@@ -32,22 +32,24 @@ What time, budget, team, data, privacy, hosting, course, or stakeholder constrai
 
 **Team answer:**
 
+**Dependency to confirm:** The company chatbot must allow the team to register the MCP and provide a way to enforce the appropriate employee access rules.
+
 ## Development phases and milestones
 
 Each milestone is a phase of development. The exit condition describes what the team should be able to demonstrate before moving to the next phase.
 
 | Milestone | Exit condition | Owner | Date |
 | --- | --- | --- | --- |
-| 1. End-to-end skeleton | Basic authentication works. An employee can sign in with a software role and see basic onboarding information; an admin can sign in and create a team. A basic MCP processes one knowledge source containing information about different teams, builds the initial vector database, and supports a basic team-based path. |  |  |
-| 2. Dynamic software engineer onboarding | When a software engineer employee requests an onboarding path, the prototype creates and displays one using its connected knowledge source, rather than a prewritten path. |  |  |
-| 3. More data and multiple teams | Tune the MCP and supporting knowledge pipeline to handle more content across multiple teams and return content for the relevant team. |  |  |
-| 4. Multiple dynamic team paths | Employees from different teams can request and receive paths created from knowledge relevant to their respective teams. |  |  |
-| 5. Documentation-agnostic ingestion | The ingestion process works with more than one documentation source through a common approach; the team will select the source types to demonstrate. |  |  |
-| 6. Finalized UI/UX and company chatbot | The agreed employee and admin interfaces are complete, and the MCP is registered with the company chatbot for a working demonstration. |  |  |
-| 7. Individually assigned paths | An individual can be assigned a path and access that assigned path; the assignment rules and learning experience will be defined by the team. |  |  |
-| 8. Deployment | The integrated prototype runs in the team's chosen environment and is accessible for evaluation. |  |  |
-| 9. Human prototype testing | People use the deployed prototype; the team gathers feedback and evidence about onboarding speed, knowledge retention, and ability to apply knowledge. |  |  |
-| 10. Iterate on feedback | The team prioritizes findings from human testing, makes the selected improvements, and demonstrates the updated prototype. |  |  |
+| 1. End-to-end skeleton | An admin signs in and creates a team. A software employee signs in and sees basic onboarding information and a basic team-based path. The initial MCP processes one source containing information about different teams and builds the initial vector database. A user cannot retrieve another team's restricted content. The team records how it will compare onboarding speed, retention, and application during evaluation and confirms the company chatbot integration requirements. |  |  |
+| 2. Dynamic software engineer onboarding | A software engineer employee requests a path, and the prototype creates and displays one from connected knowledge rather than a prewritten path. The team verifies that the path uses software-relevant material, excludes unauthorized material, and identifies the source of each learning item. |  |  |
+| 3. More data and multiple teams | The MCP and supporting knowledge pipeline process a team-defined, larger collection covering at least two teams. Retrieval checks show that each request returns relevant material for the authorized team and withholds restricted material from other teams. The team records the observed results and failures to guide tuning. |  |  |
+| 4. Multiple dynamic team paths | Employees from at least two teams request paths and receive distinct paths generated from their respective teams' knowledge. The team verifies the content and source references in both paths and checks that neither path exposes restricted content from the other team. |  |  |
+| 5. Documentation-agnostic ingestion | The team connects a second, different type of documentation source through the common ingestion process and generates paths using content from both sources. A changed or removed document is reflected in the retrievable knowledge and its source references after the agreed refresh process. |  |  |
+| 6. Finalized UI/UX and company chatbot | Users can complete the agreed employee and admin journeys through the finished interface. The MCP is registered with the company chatbot; a signed-in employee can request relevant, source-backed knowledge there. The team verifies that chatbot responses obey the same access rules as the employee interface, including a denied-access case. |  |  |
+| 7. Individually assigned paths | An authorized person assigns one employee a specific topic contained in the documentation hub. That employee can access a path for the topic, with learning items tied to the relevant documents. The team verifies that the assignment is associated with the intended employee. |  |  |
+| 8. Deployment | The integrated prototype runs in the chosen evaluation environment. The team repeats the core employee, admin, and chatbot journeys there, checks access controls, and confirms the system can be restarted without losing required data. |  |  |
+| 9. Human prototype testing | Representative people complete team onboarding and individual-topic learning tasks in the deployed prototype. The team records task times, a knowledge check, a later retention check, an application task, and usability feedback, then reports the results and limitations against its evaluation plan. |  |  |
+| 10. Iterate on feedback | The team ranks findings from human testing, selects improvements, implements them, and repeats the affected checks. The final demonstration shows the changes made, the results, and any remaining limitations. |  |  |
 
 Milestone 2 focuses on the software engineer role. Individually assigned paths are planned for milestone 7.
 
