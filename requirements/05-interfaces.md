@@ -15,10 +15,10 @@ Describe behavior visible at system boundaries. Leave endpoint names, frameworks
 | Interface | External actor or system | Required task | Inputs | Outputs / errors | Scope |
 | --- | --- | --- | --- | --- | --- |
 | Employee interface | Signed-in employee associated with one invited team | Request and follow a team or individually assigned path | Employee account and team association, path request or assignment | Path with source references, or an unavailable/denied result | Prototype |
-| Admin interface | Signed-in team admin | Create a team, invite a person to the admin's team, and assign an individual topic | Admin identity, team and recipient details, or employee and topic | Confirmation or failure | Prototype |
+| Admin interface | Signed-in team admin or Django superuser | Create a team, invite a person to an authorized team, and assign an individual topic | Admin identity, team and recipient details, or employee and topic | Confirmation or failure | Prototype |
 | Company chatbot through MCP | Signed-in employee or admin | Retrieve onboarding knowledge from scraped documents | Question and signed-in user identity | Source-backed content from any scraped document, or an unavailable or denied result | First chatbot iteration; registration dependency |
 | Documentation ingestion | Connected documentation sources | Supply team knowledge | Source content and team association | Indexed knowledge or ingestion failure | Prototype |
-| Team invitation email | Admin of destination team, invitation recipient, and Mailgun | Send and accept an invitation to a specific team | Recipient email and destination team | Invitation email or delivery failure; acceptance flow | Prototype; milestone 1 |
+| Team invitation email | Django superuser or admin of destination team, invitation recipient, and Mailgun | Send and accept an invitation to a specific team | Recipient email and destination team | Invitation email or delivery failure; acceptance flow | Prototype; milestone 1 |
 
 ## Shall statements
 
@@ -29,4 +29,4 @@ Describe behavior visible at system boundaries. Leave endpoint names, frameworks
 | SR-INT-003 | Make source-backed knowledge from all scraped documents available to signed-in employees and admins through the registered company chatbot's MCP connection in its first iteration. | Company chatbot; UC-05 | First chatbot iteration | Request knowledge from two teams through the chatbot and inspect sources; deny a signed-out request. | Draft |
 | SR-INT-006 | Send team invitation emails through Mailgun to the intended recipient. | Invitation email; UC-07; SOW milestone 1 | Prototype | Initiate an invitation and confirm delivery to the test recipient. | Draft |
 | SR-INT-007 | Let an invitation recipient accept the invitation and choose a username and password. | Invitation acceptance; UC-08; SOW milestone 1 | Prototype | Complete an invitation and verify account creation. | Draft |
-| SR-INT-008 | Let a team admin initiate an invitation to that team through the admin interface. | Admin interface; UC-07; SOW milestone 1 | Prototype | Initiate an invitation to the admin's team and verify another team cannot be selected. | Draft |
+| SR-INT-008 | Let the Django superuser initiate an invitation to any team, and let a team admin initiate an invitation only to a team they administer. | Admin interface; UC-07; SOW milestone 1 | Prototype | Initiate invitations to two teams as superuser; as team admin, invite to an administered team and verify another team cannot be selected. | Draft |
