@@ -23,6 +23,7 @@
 | SR-SEC-009 | Allow the Django superuser to invite people to any team. | UC-07; SOW milestone 1 | No team restriction for the superuser's invitations | Prototype | As superuser, send invitations to two different teams. | Draft |
 | SR-SEC-010 | Allow only the Django superuser to appoint a team admin. | UC-10; SOW milestone 1 | Team-admin appointments require superuser authority | Prototype | Appoint a team admin as superuser; reject the same action from a team admin account. | Draft |
 | SR-SEC-011 | In the employee interface, allow the assigned employee to access another team's documents used for an explicitly assigned learning path, without expanding access to those documents through ordinary team onboarding or for other employees. | UC-04; SOW milestone 7 | Access limited to the assigned employee and path | Prototype | Assign a cross-team topic, verify the assigned employee can open its path and source content, then verify ordinary onboarding and another employee's path do not gain that content. | Draft |
+| SR-SEC-012 | Allow a team admin to assign an individual learning topic only to employees on a team that admin administers. | UC-03; SOW milestone 7 | No cross-team employee assignments by a team admin | Prototype | Assign to an employee on the admin's team and reject an assignment to an employee on another team. | Draft |
 
 **First chatbot iteration:** The chatbot and employee interface have different document access policies. The chatbot exposes all scraped documents to signed-in employees and admins. Ordinary team onboarding in the employee interface uses the employee's team documents and company-wide shared documents; an explicit individual assignment can grant that employee access to another team's documents for the assigned path. The team intends to consider configurable all-document or team-only chatbot access in a later iteration.
 
@@ -37,7 +38,8 @@
 | Another employee without that assignment | Team B documents through the assigned path | Deny | SR-SEC-011 |
 | Signed-in employee or admin using company chatbot | Scraped documents from any team through the chatbot | Allow in first iteration | SR-SEC-001, SR-SEC-004 |
 | Employee | Assign an individual learning topic | Deny | SR-SEC-003 |
-| Admin | Assign an individual learning topic | Allow | SR-SEC-003 |
+| Admin of team A | Assign an individual learning topic to an employee of team A | Allow | SR-SEC-003, SR-SEC-012 |
+| Admin of team A | Assign an individual learning topic to an employee of team B | Deny | SR-SEC-012 |
 | Admin of team A | Invite a person to team B | Deny | SR-SEC-008 |
 | Django superuser | Invite people to team A or team B | Allow | SR-SEC-009 |
 | Django superuser | Appoint a team admin | Allow | SR-SEC-010 |
