@@ -30,7 +30,7 @@ What time, budget, team, data, privacy, hosting, course, or stakeholder constrai
 
 **Team answer:**
 
-**Dependency to confirm:** The company chatbot must allow the team to register the MCP. The team must define who is eligible to use it in the first iteration and how access policies could be configured in a later iteration.
+**Dependency to confirm:** The company chatbot must allow the team to register the MCP. In the first iteration, all signed-in employees and admins may use it. The team still needs to define how access policies could be configured in a later iteration.
 
 ## Development phases and milestones
 
@@ -43,7 +43,7 @@ Each milestone is a phase of development. The exit condition describes what the 
 | 3. More data and multiple teams | The MCP and supporting knowledge pipeline process a team-defined, larger collection covering at least two teams. Retrieval checks show that each request returns relevant material for the authorized team and withholds restricted material from other teams. The team records the observed results and failures to guide tuning. |
 | 4. Multiple dynamic team paths | Employees from at least two teams request paths and receive distinct paths generated from their respective teams' knowledge. The team verifies the content and source references in both paths and checks that neither path exposes restricted content from the other team. |
 | 5. Documentation-agnostic ingestion | The team connects a second, different type of documentation source through the common ingestion process and generates paths using content from both sources. A changed or removed document is reflected in the retrievable knowledge and its source references after the agreed refresh process. |
-| 6. Finalized UI/UX and company chatbot | Users can complete the agreed employee and admin journeys through the finished interface. The MCP is registered with the company chatbot; in its first iteration, eligible chatbot users can request source-backed knowledge from all scraped documents regardless of team. The team verifies chatbot access and the employee interface's team-specific access separately. |
+| 6. Finalized UI/UX and company chatbot | Users can complete the agreed employee and admin journeys through the finished interface. The MCP is registered with the company chatbot; in its first iteration, all signed-in employees and admins can request source-backed knowledge from all scraped documents regardless of team. The team verifies chatbot access and the employee interface's team-specific access separately. |
 | 7. Individually assigned paths | An admin assigns one employee a specific topic contained in the documentation hub. That employee can access a path for the topic, with learning items tied to the relevant documents. The team verifies that the assignment is associated with the intended employee and cannot be made by an employee. |
 | 8. Deployment | The integrated prototype runs in the chosen evaluation environment. The team repeats the core employee, admin, and chatbot journeys there, checks access controls, and confirms the system can be restarted without losing required data. |
 | 9. Human prototype testing | Representative people complete team onboarding and individual-topic learning tasks in the deployed prototype. The team records task times, a knowledge check, a later retention check, an application task, and usability feedback, then reports the results and limitations against its evaluation plan. |
