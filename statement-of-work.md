@@ -10,6 +10,16 @@ What problem will this capstone prototype address, for whom, and what result wil
 
 **Team answer:**
 
+## Product outcome measures
+
+We will evaluate the prototype's user experience and quality by whether it helps people:
+
+1. Complete onboarding faster.
+2. Retain the knowledge they learn during onboarding.
+3. Apply that knowledge to role-relevant tasks.
+
+The team will define the baseline, measurement method, and success threshold for each outcome in the evaluation plan.
+
 ## Scope
 
 Which user groups, roles, knowledge sources, journeys, and interfaces are included in the prototype? Which are future possibilities?
