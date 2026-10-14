@@ -25,7 +25,7 @@
 | SR-DATA-010 | Poll the public GitHub documentation repository every 10 minutes for added, changed, and removed Markdown files beginning in milestone 2. | SOW milestone 2 | Prototype | Add, change, and remove test Markdown files, wait for the next 10-minute polling cycle, and inspect indexed knowledge. | Draft |
 | SR-DATA-011 | Retain each ingested document's available creation or last-updated timestamp with its source reference so conflicting documents can be dated in generated results. | UC-02, UC-05 | Prototype | Inspect indexed documents with known dates and check the dates in a conflicting-source result. | Draft — missing timestamp behavior open |
 | SR-DATA-012 | Keep an employee's generated onboarding path and completed-step state while it is in progress, and remove the active path when the employee finishes it. | UC-11, UC-12; SOW milestone 2 | Prototype | Start and partially complete a path, inspect its active state, then finish it and verify removal. | Draft — completion-history retention open |
-| SR-DATA-013 | Use documentation relevant to a team's onboarding topic when generating that topic's path, while applying the employee-interface document access rules. | UC-02; SR-FUNC-028 | Prototype; first demonstration phase open | Compare paths for two software topics and confirm each uses relevant permitted sources. | Draft |
+| SR-DATA-013 | Use documentation relevant to a team's derived onboarding topic when generating that topic's path, while applying the employee-interface document access rules. | UC-02; SR-FUNC-028; SOW milestone 2 | Prototype | Compare Software Database and API paths and confirm each uses relevant permitted sources. | Draft |
 
 ## Data inventory
 
