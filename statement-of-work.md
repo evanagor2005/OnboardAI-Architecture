@@ -4,12 +4,6 @@
 **Project period:**  
 **Team and decision authority:**
 
-## Purpose and intended outcome
-
-What problem will this capstone prototype address, for whom, and what result will count as valuable?
-
-**Team answer:**
-
 ## Product outcome measures
 
 We will evaluate the prototype's user experience and quality by whether it helps people:
@@ -20,15 +14,9 @@ We will evaluate the prototype's user experience and quality by whether it helps
 
 The team will define the baseline, measurement method, and success threshold for each outcome in the evaluation plan.
 
-## Scope
-
-Which user groups, roles, knowledge sources, journeys, and interfaces are included in the prototype? Which are future possibilities?
-
-**In scope:**
-
-**Out of scope:**
-
 ## Deliverables
+
+The team plans to complete all three deliverables through the development phases below.
 
 | Deliverable ID | Deliverable | Reviewable evidence | Owner | Due date |
 | --- | --- | --- | --- | --- |
@@ -36,7 +24,7 @@ Which user groups, roles, knowledge sources, journeys, and interfaces are includ
 | DEL-002 | MCP registered with the company chatbot | To define |  |  |
 | DEL-003 | Individual-based learning | To define |  |  |
 
-The team will define what each deliverable includes and what evidence demonstrates its completion. In particular, the scope of individual-based learning remains open.
+The team will define what evidence demonstrates completion of each deliverable. The details of individual-based learning remain to be defined.
 
 ## Constraints and dependencies
 
@@ -44,13 +32,24 @@ What time, budget, team, data, privacy, hosting, course, or stakeholder constrai
 
 **Team answer:**
 
-## Milestones and responsibilities
+## Development phases and milestones
+
+Each milestone is a phase of development. The exit condition describes what the team should be able to demonstrate before moving to the next phase.
 
 | Milestone | Exit condition | Owner | Date |
 | --- | --- | --- | --- |
-| 2. Dynamic software engineer onboarding path | When a software engineer employee requests an onboarding path, the prototype creates and displays one using its connected knowledge source, rather than a prewritten path. |  |  |
+| 1. End-to-end skeleton | Basic authentication works. An employee can sign in with a software role and see basic onboarding information; an admin can sign in and create a team. A basic MCP processes one knowledge source containing information about different teams, builds the initial vector database, and supports a basic team-based path. |  |  |
+| 2. Dynamic software engineer onboarding | When a software engineer employee requests an onboarding path, the prototype creates and displays one using its connected knowledge source, rather than a prewritten path. |  |  |
+| 3. More data and multiple teams | Tune the MCP and supporting knowledge pipeline to handle more content across multiple teams and return content for the relevant team. |  |  |
+| 4. Multiple dynamic team paths | Employees from different teams can request and receive paths created from knowledge relevant to their respective teams. |  |  |
+| 5. Documentation-agnostic ingestion | The ingestion process works with more than one documentation source through a common approach; the team will select the source types to demonstrate. |  |  |
+| 6. Finalized UI/UX and company chatbot | The agreed employee and admin interfaces are complete, and the MCP is registered with the company chatbot for a working demonstration. |  |  |
+| 7. Individually assigned paths | An individual can be assigned a path and access that assigned path; the assignment rules and learning experience will be defined by the team. |  |  |
+| 8. Deployment | The integrated prototype runs in the team's chosen environment and is accessible for evaluation. |  |  |
+| 9. Human prototype testing | People use the deployed prototype; the team gathers feedback and evidence about onboarding speed, knowledge retention, and ability to apply knowledge. |  |  |
+| 10. Iterate on feedback | The team prioritizes findings from human testing, makes the selected improvements, and demonstrates the updated prototype. |  |  |
 
-**Open detail for milestone 2:** The team will decide whether individual employee information affects the path at this stage.
+Milestone 2 focuses on the software engineer role. Individually assigned paths are planned for milestone 7.
 
 ## Acceptance and handoff
 
@@ -60,6 +59,6 @@ Who accepts the deliverables, using what evidence? What will be handed off at th
 
 ## Changes
 
-Who may approve a scope change, and how will its effect on schedule and deliverables be recorded?
+Who may approve a change to the plan, and how will its effect on the schedule and deliverables be recorded?
 
 **Team answer:**
