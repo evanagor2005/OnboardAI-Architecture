@@ -2,6 +2,8 @@
 
 Plan how to prove the accepted [requirements](../requirements/06-acceptance-and-verification.md), [architecture rules](../adr/README.md), and [statement-of-work outcomes](../statement-of-work.md) are met. Actual results are recorded after tests run.
 
+The evaluation corpus will mix approved real documents and realistic sample documents. Record which items are real or sample and the approval for each real item before testing.
+
 ## Questions
 
 - What representative roles, documents, permissions, and user tasks will be tested?
