@@ -17,3 +17,12 @@ Start with the [statement of work](../statement-of-work.md), then define observa
 | --- | --- | --- | --- | --- | --- |
 
 Give each accepted requirement one clear obligation and a stable ID, such as `SR-FUNC-001`. Write `Open` when the team has not decided. Architecture rules in [`../adr/`](../adr/README.md) must cite the requirements they serve.
+
+## Review status
+
+The team's requirements questionnaire is complete for this round. The shall statements remain drafts until team review and approval. The following choices are deliberately deferred to design or source selection:
+
+- A finished path's completion record, generated path, and steps are to be deleted, yet the employee should be cautioned if previously completed source material later changes. The design must reconcile identification of affected employees with deletion; no retained completion record is approved yet.
+- Access and refresh behavior for the website or wiki will be set when the exact second source is selected.
+- Invitation expiration duration, the test criterion for an obvious AI-inferred step, and evaluation thresholds belong in design.
+- The company chatbot's own data retention and MCP registration capabilities must be checked when that chatbot is selected. OnboardAI itself shall not retain chatbot questions or answers.
