@@ -30,6 +30,7 @@ Decide what will count as a successful prototype before interpreting test result
 | AC-14 | When two dated documents conflict, the system shows both accounts neutrally with each document's available creation or last-updated timestamp. | SR-FUNC-020, SR-DATA-011 | Conflicting test documents and a resulting path or chatbot answer showing both sides, dates, and sources. | Draft — missing timestamp behavior open |
 | AC-15 | An employee requests an onboarding path, completes some steps, and continues the active path; after the employee finishes, the active generated path is removed. | SR-FUNC-023, SR-FUNC-024, SR-FUNC-027, SR-DATA-012 | A requested path, recorded in-progress steps, and a completed path no longer available as active. | Draft — completion-history retention open |
 | AC-16 | A relevant source change updates an active onboarding path. An already completed changed step produces a revisit notice, while a future changed step is updated in the path. | SR-FUNC-025, SR-FUNC-026, SR-INT-010 | Change source content for a completed and future step, poll and refresh, then inspect the updated path and revisit notice. | Draft — future-step notification open |
+| AC-17 | Two onboarding topics within the software team produce distinct paths that use documentation relevant to their respective topics. | SR-FUNC-028, SR-DATA-013 | Generate database and API paths for the same software employee and compare steps and source references. | Draft — topic selection and phase open |
 
 ## Requirement coverage
 

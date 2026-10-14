@@ -51,6 +51,8 @@ Each milestone is a phase of development. The exit condition describes what the 
 
 Milestone 2 focuses on the software engineer role. Individually assigned paths are planned for milestone 7. Whether the UI/UX phase also integrates an external identity provider remains open now that milestone 1 creates invite-based accounts.
 
+Within one team, onboarding topics can have distinct paths. For example, the software team's database and API documentation should lead to different onboarding paths. How a topic is selected and the first milestone that demonstrates multiple topics are still to be decided.
+
 ## Acceptance and handoff
 
 What evidence confirms the deliverables are complete? What will be handed off at the end?
