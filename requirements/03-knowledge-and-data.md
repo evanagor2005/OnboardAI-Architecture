@@ -17,6 +17,8 @@
 | SR-DATA-002 | Ingest knowledge from the initial documentation source and a second, different type of documentation source. | SOW milestones 1 and 5 | Prototype | Ingest representative documents from both sources. | Draft |
 | SR-DATA-003 | Preserve source references for content used in onboarding and individual-topic paths. | UC-02, UC-04; SOW milestones 2 and 7 | Prototype | Trace path items back to their documents. | Draft |
 | SR-DATA-004 | Reflect changed or removed source documents in retrievable knowledge after the agreed refresh process. | SOW milestone 5 | Prototype | Change and remove test documents, refresh, and inspect retrieval results. | Draft — refresh timing open |
+| SR-DATA-005 | Distinguish team-specific knowledge from company-wide shared knowledge. | UC-02, UC-05; SOW milestones 3, 4, and 6 | Prototype | Inspect representative team and shared documents after ingestion. | Draft |
+| SR-DATA-006 | Use knowledge for the employee's associated team together with company-wide shared knowledge when creating team paths or serving chatbot requests. | UC-02, UC-05; SOW milestones 4 and 6 | Prototype | Request a path and chatbot result using both team and shared examples. | Draft |
 
 ## Data inventory
 

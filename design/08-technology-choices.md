@@ -16,7 +16,7 @@ Compare products and frameworks only after the relevant requirements, architectu
 | Database |  |  |  |  |  | Open |
 | Search / indexing |  |  |  |  |  | Open |
 | AI model / service, if needed |  |  |  |  |  | Open |
-| Identity / authorization |  |  |  |  |  | Open |
+| Identity / authorization | Keycloak or another identity provider (team-suggested candidates) |  |  |  |  | Open |
 | Source integration |  |  |  |  |  | Open |
 | MCP implementation, if included |  |  |  |  |  | Open |
 | Hosting / deployment |  |  |  |  |  | Open |

@@ -18,10 +18,10 @@ Who uses, administers, supplies information to, or evaluates the prototype? Whic
 
 | Actor ID | Actor | Goal | Prototype / future | Notes |
 | --- | --- | --- | --- | --- |
-| EMP | Employee associated with a team | Request and follow onboarding for the employee's team; learn an assigned topic | Prototype | The employee's team determines which team knowledge is available. |
+| EMP | Employee associated with one team | Select a team at the start, request and follow that team's onboarding, and learn an assigned topic | Prototype | Early prototype: selecting one team immediately establishes the employee's team association. Later UI/UX phase: the association comes from the role linked to the employee's identity. |
 | ADM | Admin | Create a team and assign one employee a specific topic to learn | Prototype | Admins can also use the company chatbot. |
 | CHAT | Company chatbot | Request permitted, source-backed knowledge from OnboardAI through the MCP | Prototype | All signed-in employees and admins may use it; company integration is a dependency. |
-| DOC | Documentation source | Supply team knowledge for onboarding and individual topics | Prototype | The prototype starts with one source and later adds a different type of source. |
+| DOC | Documentation source | Supply team and company-wide shared knowledge for onboarding and individual topics | Prototype | The prototype starts with one source and later adds a different type of source. |
 
 ## Use cases
 
@@ -44,6 +44,7 @@ Each **use case** is one task an actor tries to complete. The **trigger** is the
 | UC-03 | Admin | One employee needs to learn a specific documented topic | Assign that topic to the employee | The assignment is associated with the intended employee | The admin sees that the assignment did not succeed | Yes — milestone 7 |
 | UC-04 | Employee with an assigned topic | The employee is ready to learn the assigned topic | Open the individual learning path | The employee sees a path tied to relevant hub documents | The employee sees that the path is unavailable or lacks permitted source material | Yes — milestone 7 |
 | UC-05 | Signed-in employee or admin | The person asks the chatbot an onboarding question | Request OnboardAI knowledge through the chatbot | The chatbot receives knowledge and sources permitted for that person | The chatbot receives no restricted content and communicates when access or knowledge is unavailable | Yes — milestone 6 |
+| UC-06 | Employee | The employee enters the early prototype for the first time | Select one team | The selected team immediately becomes the employee's team; that team's and company-wide shared documents can be used for onboarding | The employee sees that a valid team must be selected | Yes — early prototype; later replaced by identity-based association |
 
 ## Journey questions
 
