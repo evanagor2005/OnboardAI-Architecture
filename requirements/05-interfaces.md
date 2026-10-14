@@ -14,7 +14,7 @@ Describe behavior visible at system boundaries. Leave endpoint names, frameworks
 
 | Interface | External actor or system | Required task | Inputs | Outputs / errors | Scope |
 | --- | --- | --- | --- | --- | --- |
-| Employee interface | Signed-in employee associated with one invited team | Request and follow a team or individually assigned path | Employee account and team association, path request or assignment | Path with source references, or an unavailable/denied result | Prototype |
+| Employee interface | Signed-in employee associated with one invited team | Request and follow a team or individually assigned path | Employee account and team association, path request or explicit assignment | Path with accessible source references, including assigned cross-team content where authorized, or an unavailable/denied result | Prototype |
 | Admin interface | Signed-in team admin or Django superuser | Create a team, invite a person to an authorized team, assign an individual topic, or appoint a team admin as superuser | Admin identity, team and recipient details, employee and topic, or team-admin appointment | Confirmation or failure | Prototype |
 | Company chatbot through MCP | Signed-in employee or admin | Retrieve onboarding knowledge from scraped documents | Question and signed-in user identity | Source-backed content from any scraped document, or an unavailable or denied result | First chatbot iteration; registration dependency |
 | Documentation ingestion | Connected documentation sources | Supply team knowledge | Source content and team association | Indexed knowledge or ingestion failure | Prototype |

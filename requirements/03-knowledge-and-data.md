@@ -20,6 +20,7 @@
 | SR-DATA-005 | Distinguish team-specific knowledge from company-wide shared knowledge. | UC-02, UC-05; SOW milestones 3, 4, and 6 | Prototype | Inspect representative team and shared documents after ingestion. | Draft |
 | SR-DATA-006 | Use knowledge for the employee's associated team together with company-wide shared knowledge when creating team onboarding paths. | UC-02; SOW milestone 4 | Prototype | Request a path using both team and shared examples, with another team's content absent. | Draft |
 | SR-DATA-007 | Make all scraped documents available for retrieval by signed-in employees and admins through the first company-chatbot MCP integration, regardless of team labels. | UC-05; SOW milestone 6 | First chatbot iteration | Ask for documents from two teams and inspect retrieved results and sources. | Draft |
+| SR-DATA-008 | Permit an individually assigned learning path to use relevant hub documents from another team when the employee's explicit assignment grants access to them. | UC-04; SOW milestone 7 | Prototype | Assign a cross-team topic, open the resulting path as the assigned employee, and inspect its document references. | Draft |
 
 ## Data inventory
 
