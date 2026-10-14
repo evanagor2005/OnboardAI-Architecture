@@ -1,19 +1,16 @@
-# OnboardAI architecture workspace
+# OnboardAI architecture
 
-This repository is the team's working record for defining, architecting, and verifying the OnboardAI capstone prototype. The templates contain **questions and blank fields, not approved decisions**.
+This repository has one working sequence. Its templates are blank prompts; they do not approve a feature, requirement, rule, or technology.
 
-## Document sequence
+1. [Statement of work](statement-of-work.md) — what the team commits to deliver and what is out of scope.
+2. [Requirements](requirements/README.md) — what the system shall do and how success will be checked.
+3. [ADR](adr/README.md) — the team's architecture rules: what components and interactions shall guarantee, derived from requirements.
+4. [Design](design/README.md) — how the system will meet those rules, including the data model, selected technologies, and the reasons for major choices.
 
-1. [Statement of work](sow/statement-of-work.md) — what the team commits to deliver and the boundaries of that work.
-2. [Software requirements](requirements/README.md) — externally observable behavior and quality constraints, written as testable **shall** statements.
-3. [ADR: architecture rules](adr/README.md) — technology-neutral rules that components and interactions **shall** satisfy. In this repository, *ADR* is used in the team's sense of architecture rules, not as an abbreviation for Architecture Decision Record.
-4. [Design](design/README.md) — component responsibilities, data model, flows, interfaces, deployment, and technology selections that satisfy the rules.
-5. [Design decision records](design-decisions/README.md) — why the team chose significant design or technology approaches over alternatives.
-6. [Verification](verification/README.md) — evidence that requirements and architecture rules are met.
-7. [Visuals](visuals/README.md) — editable diagrams and exports supporting the design.
+`ADR` is used here in the team's sense of **architecture rules**, not Architecture Decision Records. Design decisions and their rationale live in the relevant design file; there is no separate decision-record folder. Previous templates remain available in Git history, but are not part of the current workflow.
 
-Use the [traceability matrix](traceability.md) to connect scope, requirements, architecture rules, design, and verification. Track uncertainty in [open issues](open-issues.md) and [risks and assumptions](risks-and-assumptions.md). The [original question bank](reference/workshop-questions/00-index.md) remains available for reference; its questions have not been answered or adopted as requirements.
+## How to work through the files
 
-## Workshop rule
+Discuss each question, write the team's answer, and mark it **Accepted**, **Proposed**, **Deferred**, or **Open**. Keep requirements and rules as one testable **shall** statement per row. Link requirement IDs (`SR-...`) to architecture-rule IDs (`AR-...`), then link both to the design and verification evidence. If a capability is outside the prototype, mark it **Not applicable to prototype** rather than filling it as if it were approved.
 
-The team decides the answer to each question. Write an answer only after discussion. When evidence is missing, leave the item open, name the evidence needed, and assign an owner. Mark each item as prototype, future, or both where relevant. If a whole capability is out of scope, mark its file **Not applicable to prototype** with the scope decision that explains why; an empty template does not commit the team to that feature.
+When a choice needs evidence, record the question, the small test or research needed, and an owner in the relevant file. Do not turn an assumption into an accepted decision.

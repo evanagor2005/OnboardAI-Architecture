@@ -1,0 +1,25 @@
+# Knowledge, retrieval, and AI design
+
+## Questions
+
+- How does approved content enter, update, and leave the system?
+- How are provenance, versions, source location, and permissions preserved through transformations?
+- How is eligible material searched, filtered, ranked, and passed to an answer generator?
+- How are answers grounded and cited, and when does the system abstain?
+- How are stale, conflicting, malformed, or malicious sources handled?
+- What data is sent to external AI services, if any?
+
+## Source and answer flows
+
+| Step | Input | Processing and policy | Output | Failure or uncertainty behavior | Requirement / rule |
+| --- | --- | --- | --- | --- | --- |
+
+## Chosen approach and rationale
+
+**Team design:**
+
+**Serious alternatives and tradeoffs:**
+
+**Source and answer sequence diagrams:**
+
+**Verification / open questions:**

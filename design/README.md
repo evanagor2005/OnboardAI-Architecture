@@ -1,25 +1,23 @@
-# System design
+# Design — how the system meets its rules
 
-Describe **how** the accepted [software requirements](../requirements/README.md) and [architecture rules](../adr/README.md) will be satisfied. Name chosen technologies only after requirements and rules are clear. Every significant choice should have a rationale in [`../design-decisions/`](../design-decisions/README.md).
+Use accepted [software requirements](../requirements/README.md) and [architecture rules](../adr/README.md) as inputs. Each design file should state the chosen approach, important alternatives, why the team chose it, and how it will be checked. There is **no separate design-decision folder**.
 
-| File | Design concern | Status |
-| --- | --- | --- |
-| [System context](01-system-context.md) | Actors, external systems, boundaries | Open |
-| [Component architecture](02-component-architecture.md) | Components and responsibilities | Open |
-| [Knowledge pipeline](03-knowledge-pipeline.md) | Ingestion, update, provenance | Open |
-| [Domain and data model](04-domain-and-data-model.md) | Entities, relationships, ownership | Open |
-| [Database design](05-database-design.md) | Storage, schema, indexes, migrations | Open |
-| [Identity and access design](06-identity-and-access.md) | Policy enforcement and data flow | Open |
-| [Retrieval and answer design](07-retrieval-and-answering.md) | Search, grounding, citations | Open |
-| [Onboarding design](08-onboarding.md) | Paths, tutoring, progress if included | Open |
-| [UI design](09-user-interface.md) | Screens, states, accessibility | Open |
-| [API and MCP design](10-api-and-mcp.md) | Contracts, tools, errors | Open |
-| [Deployment and operations](11-deployment-and-operations.md) | Runtime, security, observability | Open |
-| [Failure and recovery](12-failure-and-recovery.md) | Degraded behavior and restoration | Open |
-| [Technology selection](13-technology-selection.md) | Candidate comparison and selected stack | Open |
-| [System map](14-system-map.md) | Integrated view of the accepted design | Open |
-| [Threat model](15-threat-model.md) | Assets, boundaries, misuse, mitigations | Open |
+| File | Design area |
+| --- | --- |
+| [System overview](01-system-overview.md) | Actors, components, boundaries, end-to-end flows |
+| [Data and database](02-data-and-database.md) | Domain model, storage, schema, access patterns |
+| [Knowledge, retrieval, and AI](03-knowledge-retrieval-and-ai.md) | Source lifecycle, search, grounding, citations |
+| [Identity and access](04-identity-and-access.md) | Authentication, policy, enforcement, audit |
+| [Onboarding and UI](05-onboarding-and-ui.md) | Paths and learning interactions if included; screens and states |
+| [APIs and MCP](06-apis-and-mcp.md) | Internal and external contracts if included |
+| [Deployment and operations](07-deployment-and-operations.md) | Runtime, threats, failures, monitoring, recovery |
+| [Technology choices](08-technology-choices.md) | Candidate comparison and selected stack |
+| [Evaluation plan](09-evaluation-plan.md) | Tests and evidence for requirements and rules |
+| [Visuals](visuals/README.md) | Editable diagrams and exports |
 
-## Design review rule
+## Design entry format
 
-For each design element, record the requirement or rule it serves, the chosen approach, important alternatives, verification evidence, and open risks. Do not turn an untested assumption into an accepted design.
+| Requirement / rule IDs | Chosen design | Alternatives considered | Why this choice | Evidence or test | Status |
+| --- | --- | --- | --- | --- | --- |
+
+Record unresolved choices as **Open** with an owner and the evidence needed. A design is not accepted merely because a field has been filled in.

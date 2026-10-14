@@ -1,25 +1,18 @@
 # ADR — architecture rules
 
-In this repository, ADR means the team's **architecture rules**: testable, technology-neutral statements describing what the architecture and its components shall guarantee. The team has not yet specified a longer expansion of the initials. These files are **not Architecture Decision Records**. Rationale for selected designs and technologies belongs in [`../design-decisions/`](../design-decisions/README.md).
+In this repository, **ADR means the team's architecture rules**: testable, preferably technology-neutral **shall** statements for components and their interactions. It is not a folder for Architecture Decision Records. Requirements say what the system must do; these rules say what the architecture must guarantee to make that possible; [`../design/`](../design/README.md) says how it will do so.
 
-Derive each rule from one or more [software requirements](../requirements/README.md). Use a stable ID such as `AR-DATA-001`. Write one obligation per **shall** statement, identify the responsible component or boundary, and specify how it will be verified. Do not name a database, framework, model, or cloud product in a rule unless that product is itself an approved constraint.
-
-## Rule groups
-
-| File | Architecture concern | Status |
-| --- | --- | --- |
-| [System boundaries](system-boundaries.md) | Ownership, separation, trust boundaries | Open |
-| [Knowledge lifecycle](knowledge-lifecycle.md) | Ingestion, provenance, updates, deletion | Open |
-| [Identity and access](identity-and-access.md) | Authentication, authorization, enforcement | Open |
-| [Data and persistence](data-and-persistence.md) | Stored information, integrity, queries, recovery | Open |
-| [Retrieval and answers](retrieval-and-answers.md) | Grounding, citations, uncertainty | Open |
-| [Onboarding](onboarding.md) | Paths, tutoring, progress, assessment if included | Open |
-| [Interfaces and MCP](interfaces-and-mcp.md) | Contracts and consistent behavior | Open |
-| [Operations](operations.md) | Observability, failure, cost, maintenance | Open |
+| File | Rule area |
+| --- | --- |
+| [System boundaries](01-system-boundaries.md) | Responsibilities, external dependencies, trust boundaries |
+| [Data and knowledge](02-data-and-knowledge.md) | Data-layer guarantees, source lifecycle, provenance |
+| [Identity and access](03-identity-and-access.md) | Policy and enforcement across paths |
+| [Answers and onboarding](04-answers-and-onboarding.md) | Grounding, citations, learning behavior if included |
+| [Interfaces and operations](05-interfaces-and-operations.md) | Contracts, failures, observability, recovery |
 
 ## Rule format
 
-| ID | Shall statement | Source requirement(s) | Applies to | Verification method | Status |
+| ID | The architecture shall... | Source requirement ID | Applies to | How verified | Status |
 | --- | --- | --- | --- | --- | --- |
 
-Statuses: Proposed, Accepted, Deferred, Superseded. A proposed statement is not an approved rule.
+Use a stable ID such as `AR-DATA-001`; link each rule to an accepted software requirement or approved constraint. Keep technology choices and rationale in the relevant design file. If a product is an explicit approved constraint, say so; otherwise avoid naming it in the rule.
