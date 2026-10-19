@@ -50,7 +50,7 @@ Each **use case** is one task an actor tries to complete. The **trigger** is the
 | UC-09 | Employee transferring teams | The employee needs to move to a different team | Accept an invitation initiated by the destination team's admin or the superuser | The employee's team association changes to the destination team | The employee remains on the existing team if the transfer cannot be completed | Yes — development phase open |
 | UC-10 | Django superuser | A team needs an admin | Appoint an admin for the team | The appointed person has admin authority for that team | The superuser sees that the appointment did not succeed | Yes — milestone 1 |
 | UC-11 | Employee with an active onboarding or assigned learning path | The employee is working through a path and a relevant document changes | Continue the path | The path reflects the changed knowledge; if a completed step changed, the employee is told to revisit it | The current path remains visible with a freshness warning if refresh fails | Yes — milestones 2 and 7 |
-| UC-12 | Employee with an active onboarding or assigned learning path | The employee finishes the path | Complete the path | A completion record is shown, then that record, generated path, and steps are deleted | The employee sees that completion could not be confirmed | Yes — milestones 2 and 7 |
+| UC-12 | Employee with an active onboarding or assigned learning path | The employee finishes the path | Complete the path | A completion record identifying the employee and completed path is kept; the generated path and its steps are deleted | The employee sees that completion could not be confirmed | Yes — milestones 2 and 7 |
 
 ## Journey questions
 

@@ -19,4 +19,4 @@ Use a stable ID such as `AR-DATA-001`; link each rule to an accepted software re
 
 ## Current review state
 
-The rule tables are a first derivation from the team's completed requirements questionnaire. Their status is **Draft — derived**, not team-approved. Review each rule against its linked requirement before accepting it or using it to settle a component or technology choice. In particular, the post-completion change caution has an unresolved deletion dependency in [data and knowledge](02-data-and-knowledge.md).
+The rule tables are a first derivation from the team's completed requirements questionnaire. Their status is **Draft — derived**, not team-approved. Review each rule against its linked requirement before accepting it or using it to settle a component or technology choice. The team has since resolved the post-completion deletion question: retain a completion record and source association, while deleting generated path content and steps. See [data and knowledge](02-data-and-knowledge.md).
