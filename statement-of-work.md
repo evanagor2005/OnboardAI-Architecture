@@ -53,7 +53,7 @@ Each milestone is a phase of development. The exit condition describes what the 
 
 Milestone 2 focuses on the software engineer role. Individually assigned paths are planned for milestone 7. Whether the UI/UX phase also integrates an external identity provider remains open now that milestone 1 creates invite-based accounts.
 
-Within one team, OnboardAI derives onboarding topics from the documentation and produces distinct paths for those topics. Milestone 2 demonstrates this with Software Database and API paths selected from a generated topic list. Once a path is completed, the employee should see a caution if material they completed later changes; the minimum information needed for that caution must be reconciled with the requested deletion of completion details in design.
+Within one team, OnboardAI derives onboarding topics from the documentation and produces distinct paths for those topics. Milestone 2 demonstrates this with Software Database and API paths selected from a generated topic list. Once a path is completed, OnboardAI retains a record of the employee, completed path, and associated sources so it can caution the employee if that material later changes; generated path content and steps are deleted.
 
 ## Acceptance and handoff
 
