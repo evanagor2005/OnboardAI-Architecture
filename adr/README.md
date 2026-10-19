@@ -16,3 +16,7 @@ In this repository, **ADR means the team's architecture rules**: testable, prefe
 | --- | --- | --- | --- | --- | --- |
 
 Use a stable ID such as `AR-DATA-001`; link each rule to an accepted software requirement or approved constraint. Keep technology choices and rationale in the relevant design file. If a product is an explicit approved constraint, say so; otherwise avoid naming it in the rule.
+
+## Current review state
+
+The rule tables are a first derivation from the team's completed requirements questionnaire. Their status is **Draft — derived**, not team-approved. Review each rule against its linked requirement before accepting it or using it to settle a component or technology choice. In particular, the post-completion change caution has an unresolved deletion dependency in [data and knowledge](02-data-and-knowledge.md).
