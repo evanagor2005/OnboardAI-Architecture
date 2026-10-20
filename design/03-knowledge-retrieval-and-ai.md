@@ -25,6 +25,8 @@
 
 **Project publication and refresh:** The creating admin must review a new generated Project before first publication. After publication, a successful source-driven regeneration publishes automatically without another admin review. Active employees receive the agreed step-change behavior; completers receive only a general warning when source material associated with their finished Project changes. The shared Project and steps remain available after any one employee completes them.
 
+**Original-source links:** Employees must be able to open every original document linked from a team path or Project assigned to them. The searchable index can hold derived text and source references without becoming an employee-facing library of full document copies. Opening an original link depends on the source system's own access rules; the prototype's first GitHub source is public. When choosing a later website or wiki source, verify that intended employees can open its linked pages, or design an authorized way to provide access. Path ownership does not make a supporting document exclusive to that team.
+
 **Serious alternatives and tradeoffs:**
 
 **Source and answer sequence diagrams:**

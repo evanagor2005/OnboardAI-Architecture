@@ -18,7 +18,7 @@ Include only experiences accepted in the statement of work and requirements.
 
 ## Chosen approach and rationale
 
-**Team design:**
+**Team design:** An employee may open every original-source link shown in an assigned team path or Project. The employee path view does not, by this decision alone, become a search or browsing interface for the entire document index. The source opens at its original location; source-system authentication and availability must be checked when selecting a connector.
 
 **Serious alternatives and tradeoffs:**
 
