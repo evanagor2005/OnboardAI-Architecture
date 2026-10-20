@@ -19,7 +19,32 @@
 
 ## Chosen approach and rationale
 
-**Team design:** PostgreSQL with pgvector is the selected vector storage and similarity-search technology. Qwen3-8B through Ollama is the selected starting model and runtime for generating and revising path drafts, subject to representative quality and latency tests. An admin gives the path generator a topic or keyword; it saves reusable team-owned path content and ordered steps at runtime using relevant common-pool documents. An admin reviews a new path before first publication. When changed source material affects a published path, successfully regenerated changes publish automatically without another admin review; a failed refresh leaves the current path available with a freshness warning. Previously completed changed steps require a revisit notice, while future steps update quietly. The embedding model, chunking method, keyword or hybrid search, ranking, citation construction, and deployed Ollama host remain open. Employee path visibility and chatbot retrieval use their distinct authorization rules.
+**Team design:** PostgreSQL with pgvector is the selected vector storage and similarity-search technology. BGE-M3 through Ollama is the selected embedding model and runtime for indexed documentation sections and search requests. Qwen3-8B through Ollama is the selected starting model and runtime for generating and revising path drafts, subject to representative quality and latency tests. An admin gives the path generator a topic or keyword; it saves reusable team-owned path content and ordered steps at runtime using relevant common-pool documents. An admin reviews a new path before first publication. When changed source material affects a published path, successfully regenerated changes publish automatically without another admin review; a failed refresh leaves the current path available with a freshness warning. Previously completed changed steps require a revisit notice, while future steps update quietly. The chunking method, keyword or hybrid search, ranking, citation construction, and deployed Ollama host remain open. Employee path visibility and chatbot retrieval use their distinct authorization rules.
+
+## Selected indexing and path-generation flow
+
+```mermaid
+flowchart LR
+    source[Original documents: GitHub Markdown, later GitLab Wiki] --> ingest[Ingest text and preserve source URL, identity, and timestamp]
+    ingest --> chunks[Split text into searchable sections]
+    chunks --> embed[BGE-M3 via Ollama: embed each section]
+    embed --> index[PostgreSQL with pgvector: store sections, vectors, and source references]
+    request[Authorized admin: path keyword] --> query[BGE-M3 via Ollama: embed keyword]
+    query --> search[Search pgvector for relevant sections]
+    index --> search
+    search --> evidence[Retrieved sections with original-source references]
+    evidence --> generate[Qwen3-8B via Ollama: draft ordered path steps]
+    generate --> validate[Validate step structure, evidence links, and AI-suggestion labels]
+    validate --> saved[Save reusable draft team path or Project and its steps]
+    saved --> teamreview[Team path: admin review before publication]
+    saved --> projectreview[Project: assigning admin reviews for each employee]
+```
+
+**Boundary of each model:** BGE-M3 represents source sections and the admin's keyword as comparable vectors; it does not compose explanations or steps. Qwen3-8B receives the retrieved text and proposes the path's summaries, reading steps, and questions. Generation must preserve links back to the original sources and distinguish unsupported AI suggestions from documented statements. The same BGE-M3 model and embedding settings must be used for indexing and searching. Changing the embedding model requires re-embedding the indexed sections.
+
+**Scope of publication:** A new team path is reviewed by its team's admin before publication. A new Project is saved independently of employees, and each assigning admin reviews it for the recipient employee before that assignment becomes visible. Source-driven revisions follow the already agreed automatic-publication and employee-notice rules. The retrieval pool remains common across teams; team-path ownership and Project assignments control employee path visibility, not source ownership.
+
+**MCP distinction:** The first chatbot MCP tools can use the same BGE-M3 and pgvector retrieval flow to return source-backed knowledge. The customer's Claude or ChatGPT host composes its chat response; Qwen3-8B is selected for OnboardAI path generation, not as a required chatbot model.
 
 **Project generation scope:** A Project is generated from an admin's keyword against the indexed documentation pool. Generation searches the full pool without a team filter. A Project is not owned by a team. The team assumes indexed documents are not confidential and allows team admins to inspect sources during Project creation and review. A Project assignment governs which employees see the Project and can follow its linked original sources. The exact retrieval/ranking method and generator component boundary remain open.
 
