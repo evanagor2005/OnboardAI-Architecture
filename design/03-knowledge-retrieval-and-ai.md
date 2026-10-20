@@ -23,6 +23,8 @@
 
 **Project generation scope:** A Project is generated from an admin's keyword against the indexed documentation pool. The optional team filter narrows evidence to that team's documents plus company-wide shared documents; omitting it searches the full indexed pool. A Project is not owned by the filtered team. The team assumes indexed documents are not confidential and allows team admins to inspect cross-team source documents during Project creation and review. This admin permission does not change ordinary employee onboarding access. A Project assignment governs which employees see the Project and its linked cross-team material. The exact retrieval/ranking method and generator component boundary remain open.
 
+**Project publication and refresh:** The creating admin must review a new generated Project before first publication. After publication, a successful source-driven regeneration publishes automatically without another admin review. Active employees receive the agreed step-change behavior; completers receive only a general warning when source material associated with their finished Project changes. The shared Project and steps remain available after any one employee completes them.
+
 **Serious alternatives and tradeoffs:**
 
 **Source and answer sequence diagrams:**
