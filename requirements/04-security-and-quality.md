@@ -27,6 +27,7 @@
 | SR-SEC-013 | Allow the Django superuser to assign an individual learning topic to an employee on any team. | UC-03; SOW milestone 7 | No team restriction for superuser assignments | Prototype | As superuser, assign topics to employees on two different teams. | Draft |
 | SR-SEC-014 | Accept each team invitation at most once and only before its expiration. | UC-08; SOW milestone 1 | One use; time limited | Prototype | Accept an invitation, reject a second use, and reject an expired invitation. | Draft — expiration duration in design |
 | SR-SEC-015 | Avoid retaining company-chatbot questions and answers in OnboardAI's data store. | UC-05; SOW milestone 6 | No OnboardAI conversation retention | First chatbot iteration | Use the chatbot and inspect OnboardAI's stored data. | Draft |
+| SR-SEC-016 | Let an appointed team admin open source documents linked from that team's paths in the admin interface for path review, even when the admin's employee team is different; do not add those paths to the admin's employee path list. | Team path-review decision | Admin access through administered team only; no employee-path assignment from admin role | Prototype | Make a Software employee an HR admin; open an HR path and its linked source in the HR admin interface, then verify HR paths are absent from the employee's "My Paths" list. | Draft — new team direction |
 
 **First chatbot iteration:** The chatbot and employee interface have different document access policies. The chatbot exposes all scraped documents to signed-in employees and admins. Ordinary team onboarding in the employee interface uses the employee's team documents and company-wide shared documents; an explicit individual assignment can grant that employee access to another team's documents for the assigned path. The team intends to consider configurable all-document or team-only chatbot access in a later iteration.
 
@@ -48,4 +49,5 @@
 | Django superuser | Invite people to team A or team B | Allow | SR-SEC-009 |
 | Django superuser | Appoint a team admin | Allow | SR-SEC-010 |
 | Team admin | Appoint another team admin | Deny | SR-SEC-010 |
+| Software employee appointed HR admin | HR path and its linked source documents in HR admin interface | Allow for review; do not add HR path to employee "My Paths" | SR-SEC-016 |
 | Employee | Change to another team without a new invitation | Deny after the initial team association | SR-SEC-006 |
