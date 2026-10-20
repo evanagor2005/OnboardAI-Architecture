@@ -5,7 +5,7 @@
 - How does approved content enter, update, and leave the system?
 - How are provenance, versions, source location, and permissions preserved through transformations?
 - How is eligible material searched, filtered, ranked, and passed to an answer generator?
-- Would exact-term matching improve retrieval of acronyms, API names, paths, and code symbols? Compare BGE-M3 vector search alone with PostgreSQL full-text ranking and a BM25-based hybrid option.
+- Does BGE-M3 retrieval find the expected sources for acronyms, API names, paths, and code symbols in representative documentation?
 - How are answers grounded and cited, and when does the system abstain?
 - How are stale, conflicting, malformed, or malicious sources handled?
 - What data is sent to external AI services, if any?
@@ -47,7 +47,7 @@ flowchart LR
 
 **MCP distinction:** The first chatbot MCP tools can use the same BGE-M3 and pgvector retrieval flow to return source-backed knowledge. The customer's Claude or ChatGPT host composes its chat response; Qwen3-8B is selected for OnboardAI path generation, not as a required chatbot model.
 
-**Open lexical-search decision:** BGE-M3 plus pgvector is the selected starting retrieval path. Evaluate whether adding lexical search improves evidence recall for representative onboarding requests, especially exact technical terms and acronyms. PostgreSQL includes `ts_rank` and `ts_rank_cd` full-text ranking, which are not BM25. A true BM25 option such as the PostgreSQL `pg_search` extension adds a deployment dependency whose availability on the chosen host must be checked. Compare vector-only, built-in full-text plus vector, and BM25 plus vector results before selecting a hybrid strategy or score-fusion method. Do not treat BM25 as selected yet. [PostgreSQL full-text ranking](https://www.postgresql.org/docs/current/textsearch-controls.html); [pg_search](https://github.com/paradedb/paradedb).
+**Retrieval evaluation:** Start with BGE-M3 vector search in pgvector. Test whether it retrieves the expected sources for representative topics and exact technical terms. Add a keyword-search component only if those tests reveal a meaningful gap. The evaluation does not require an additional search product or extension up front.
 
 **Project generation scope:** A Project is generated from an admin's keyword against the indexed documentation pool. Generation searches the full pool without a team filter. A Project is not owned by a team. The team assumes indexed documents are not confidential and allows team admins to inspect sources during Project creation and review. A Project assignment governs which employees see the Project and can follow its linked original sources. The exact retrieval/ranking method and generator component boundary remain open.
 
