@@ -13,10 +13,15 @@
 
 | Step | Input | Processing and policy | Output | Failure or uncertainty behavior | Requirement / rule |
 | --- | --- | --- | --- | --- | --- |
+| Ordinary employee onboarding search | Signed-in employee, team path or onboarding request | Search documents classified for the employee's invited team plus company-wide shared documents; exclude other teams' documents | Permitted evidence with source references | Deny missing identity; show an unavailable result if retrieval fails | AR-ACCESS-002; AR-SYS-002 |
+| Project generation search | Signed-in admin, keyword, optional team filter | With no filter, search all indexed documents. With a filter, search that team's documents plus company-wide shared documents. The filter selects source material and does not assign the Project to a team. | Evidence for a reusable Project draft, with source references | Show insufficient evidence or generation failure without publishing an incomplete Project | AR-LEARN-008; AR-ACCESS-009 |
+| Company-chatbot MCP search | Signed-in employee or admin with verified per-user token, knowledge request | Apply the first-iteration chatbot policy: search all scraped documents regardless of team | Source-backed knowledge and citations | Deny invalid identity; return unavailable result on retrieval failure | AR-ACCESS-004; AR-OPS-004 |
 
 ## Chosen approach and rationale
 
 **Team design:** PostgreSQL with pgvector is the selected vector storage and similarity-search technology. An admin gives the path generator a topic or keyword; it saves reusable team-owned path content and ordered steps at runtime. An admin reviews a new path before first publication. When changed source material affects a published path, successfully regenerated changes publish automatically without another admin review; a failed refresh leaves the current path available with a freshness warning. Previously completed changed steps require a revisit notice, while future steps update quietly. The embedding model, chunking method, keyword or hybrid search, ranking, and citation construction remain open. Retrieval must apply the appropriate employee-interface or MCP access policy before returning source-backed material.
+
+**Project generation scope:** A Project is generated from an admin's keyword against the indexed documentation pool. The optional team filter narrows evidence to that team's documents plus company-wide shared documents; omitting it searches the full indexed pool. A Project is not owned by the filtered team. The team assumes indexed documents are not confidential and allows team admins to inspect cross-team source documents during Project creation and review. This admin permission does not change ordinary employee onboarding access. A Project assignment governs which employees see the Project and its linked cross-team material. The exact retrieval/ranking method and generator component boundary remain open.
 
 **Serious alternatives and tradeoffs:**
 
