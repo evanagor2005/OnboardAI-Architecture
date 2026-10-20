@@ -20,7 +20,8 @@ Compare products and frameworks only after the relevant requirements, architectu
 | Invitation email delivery | Mailgun |  | Mailgun | Team direction; integration evidence pending | If email delivery requirements change | Team choice |
 | Source integration |  |  |  |  |  | Open |
 | MCP implementation, if included | SDK and transport candidates to research | Team chose separate MCP service and direct per-user tokens; chatbot registration proof pending | Separate MCP service; SDK and transport open | Preserves a distinct chatbot boundary and direct connection | Revisit if selected chatbot cannot connect directly with user identity | Service boundary chosen; implementation open |
-| Hosting / deployment | Platform candidates to research | MCP must be reachable by the selected company chatbot; local development arrangement still to choose | MCP hosted separately from Django; platform open | Independent MCP endpoint; network and operational work to evaluate | Revisit with chatbot network requirements | Service separation chosen; platform open |
+| Initial MCP runtime | Docker Compose for the starting MCP environment | Team direction | Run the separate MCP service as a container managed by Docker Compose | Gives the team a repeatable way to start the MCP and its configuration | Revisit if the chosen chatbot cannot reach the initial environment | Team choice for the starting setup |
+| Deployed hosting | Platform candidates to research | MCP must be reachable by the selected company chatbot; Docker Compose does not select a host | Host and network exposure open | A deployed MCP endpoint must be reachable and independently authenticate users | Revisit with chatbot network requirements | Open |
 
 ## Evidence still needed
 

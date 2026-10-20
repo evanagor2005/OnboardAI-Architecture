@@ -16,7 +16,7 @@
 
 ## Chosen approach and rationale
 
-**Team design:**
+**Team design:** Start the separate MCP service in a container managed by Docker Compose. The machine or platform running Compose, the production hosting arrangement, and how the selected company chatbot reaches the MCP endpoint remain open. The initial Compose decision does not require Django or PostgreSQL to run in containers.
 
 **Serious alternatives and tradeoffs:**
 

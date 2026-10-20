@@ -18,7 +18,7 @@ Include MCP only if it is in the accepted prototype scope.
 
 ## Chosen approach and rationale
 
-**Team design:** Run MCP as a separate service. The company chatbot connects directly using a token for the signed-in user; MCP verifies it before serving protected tools. The service uses OnboardAI's shared retrieval and authorization behavior, with the approved first-iteration chatbot access policy. Exact tools, transport, hosting platform, and token issuer remain open.
+**Team design:** Run MCP as a separate service, initially in a container managed by Docker Compose. The company chatbot connects directly using a token for the signed-in user; MCP verifies it before serving protected tools. The service uses OnboardAI's shared retrieval and authorization behavior, with the approved first-iteration chatbot access policy. Exact tools, transport, host platform, and token issuer remain open.
 
 **Serious alternatives and tradeoffs:** The team chose direct per-user token access over a Django gateway that forwards each chatbot request. Separate hosting provides an independent MCP endpoint and adds token verification, networking, and deployment work.
 
