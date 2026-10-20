@@ -32,6 +32,6 @@ The team's requirements questionnaire is complete for this round. Most shall sta
 
 - Shared team-path and Project content and steps remain after one employee completes them. Delete that employee's step-progress state and retain a completion record linking the employee to the completed path or Project. If associated source material later changes, a general path-changed warning suffices; no completed-step history is needed. Exact completion fields, source-provenance representation, and retention period remain open.
 - Milestone 1 needs only a basic saved team path. Keyword generation and admin review begin with the later dynamic-path milestones in the [statement of work](../statement-of-work.md).
-- Access and refresh behavior for the website or wiki will be set when the exact second source is selected.
+- Assigned employees must be able to open original links from the website or wiki. Its sign-in method and refresh schedule will be set when the exact second source is selected.
 - Invitation expiration duration, the test criterion for an obvious AI-inferred step, and evaluation thresholds belong in design.
 - The company chatbot's own data retention and MCP registration capabilities must be checked when that chatbot is selected. OnboardAI itself shall not retain chatbot questions or answers.

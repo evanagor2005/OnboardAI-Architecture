@@ -5,7 +5,7 @@
 ## Inputs
 
 - [Statement of work](../statement-of-work.md): milestone journeys.
-- Accepted rules include [AR-SYS-001–004](../adr/01-system-boundaries.md), [AR-DATA-001–007](../adr/02-data-and-knowledge.md), [AR-ACCESS-009–010](../adr/03-identity-and-access.md), and [AR-LEARN-008–009](../adr/04-answers-and-onboarding.md). Other rules remain drafts.
+- Accepted rules include [AR-SYS-001–004](../adr/01-system-boundaries.md), [AR-DATA-001–007](../adr/02-data-and-knowledge.md), [AR-ACCESS-005 and AR-ACCESS-009–010](../adr/03-identity-and-access.md), and [AR-LEARN-008–010](../adr/04-answers-and-onboarding.md). Other rules remain drafts.
 
 ## Proposed logical components and boundaries
 
