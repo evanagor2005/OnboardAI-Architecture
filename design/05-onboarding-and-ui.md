@@ -20,6 +20,8 @@ Include only experiences accepted in the statement of work and requirements.
 
 **Team design:** An employee may open every original-source link shown in an assigned team path or Project. The employee path view does not, by this decision alone, become a search or browsing interface for the entire document index. The source opens at its original location; source-system authentication and availability must be checked when selecting a connector.
 
+Saved team paths and Projects may contain read-and-continue and question steps. The team has not finalized whether answering a question blocks progression, how feedback appears after a correct or incorrect answer, whether retries are allowed, or whether answers are retained. Record those choices before finalizing step columns and UI states.
+
 **Serious alternatives and tradeoffs:**
 
 **Editable mockups / flows:**

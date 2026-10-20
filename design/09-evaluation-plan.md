@@ -2,7 +2,7 @@
 
 Plan how to prove the accepted [requirements](../requirements/06-acceptance-and-verification.md), [architecture rules](../adr/README.md), and [statement-of-work outcomes](../statement-of-work.md) are met. Actual results are recorded after tests run.
 
-The evaluation corpus will mix real documents approved by the project team and realistic sample documents. Record which items are real or sample and the project team's approval for each real item before testing. Each tested role and assigned topic is assumed to have at least some relevant documentation; a team may have only company-wide shared onboarding material.
+The evaluation corpus will mix real documents approved by the project team and realistic sample documents. Record which items are real or sample and the project team's approval for each real item before testing. Each tested path keyword is assumed to have some relevant documentation in the common pool. Include a document useful to paths for two different teams to test source reuse without exclusive ownership.
 
 ## Questions
 

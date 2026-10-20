@@ -1,6 +1,6 @@
 # OnboardAI architecture
 
-This repository has one working sequence. Its templates are blank prompts; they do not approve a feature, requirement, rule, or technology.
+This repository has one working sequence. Some pages contain team-confirmed decisions and others contain draft requirements, rules, or design proposals; their status labels identify which is which.
 
 1. [Statement of work](statement-of-work.md) — what the team commits to deliver and what is out of scope.
 2. [Requirements](requirements/README.md) — what the system shall do and how success will be checked.
