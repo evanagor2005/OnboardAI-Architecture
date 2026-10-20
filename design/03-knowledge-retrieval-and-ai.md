@@ -16,7 +16,7 @@
 
 ## Chosen approach and rationale
 
-**Team design:**
+**Team design:** PostgreSQL with pgvector is the selected vector storage and similarity-search technology. The embedding model, chunking method, keyword or hybrid search, ranking, and citation construction remain open. Retrieval must apply the appropriate employee-interface or MCP access policy before returning source-backed material.
 
 **Serious alternatives and tradeoffs:**
 
