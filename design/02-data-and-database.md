@@ -19,15 +19,17 @@ Start from [data and knowledge rules](../adr/02-data-and-knowledge.md), especial
 
 | Entity | Meaning and owner | Identifier | Relationships | Lifecycle | Requirement / rule |
 | --- | --- | --- | --- | --- | --- |
+| Team path | Reusable onboarding path owned by one team | Path ID, exact key name open | One team has many paths; one path may be assigned to all or selected team members | Persists independently of each employee's progress and completion | Team decision; requirements revision pending |
+| Selected-member path assignment | One employee's eligibility to see and complete one selected-members path | Path ID plus employee ID, exact key form open | Joins a team path to one employee on the same team; one row per path–employee pair | Added or removed as the path's selected audience changes | Team decision; requirements revision pending |
 
 ## Physical design
 
-**Proposed relational mapping for discussion, not an approved schema:** No cell in `team_paths` holds a set of users. An all-team path uses team membership; a selected-members path uses one row per employee in a join table. The same path content is reused while employee progress is stored separately.
+**Confirmed relational choice:** No cell in `team_paths` holds a set of users. An all-team path uses team membership; a selected-members path uses a separate join table with one row per path–employee pair. The same path content is reused while employee progress is stored separately. The table names and remaining columns below are still proposals.
 
 | Entity or derived data | Store | Table / collection | Keys / indexes | Integrity or consistency rule | Access pattern |
 | --- | --- | --- | --- | --- | --- |
 | Team-owned path | PostgreSQL | `team_paths` (proposed) | Path ID; team ID; topic/keyword; audience mode; current published version reference | One path belongs to one team; all-team or selected-members audience; path persists when an employee completes it | List paths assigned to a team member |
-| Selected path audience | PostgreSQL | `team_path_assignments` (proposed) | One row per path ID and employee ID; unique pair | Used for selected-members paths; employee must belong to the path's team | Check whether a team member can see the path |
+| Selected path audience | PostgreSQL | Separate join table chosen; `team_path_assignments` is a proposed name | One row per path ID and employee ID; unique pair | Used for selected-members paths; employee must belong to the path's team | Check whether a team member can see the path |
 | Generated path revision | PostgreSQL | `team_path_versions` (proposed) | Version ID; path ID; version number; publication state/time | Initial version awaits admin review; later source-driven revisions publish automatically after successful regeneration | Read current version; compare changed steps |
 | Ordered path step and content | PostgreSQL | `team_path_steps` (proposed) | Step ID; version ID; order; step type; saved teaching content and question data as applicable | Steps belong to one version; unique order within a version; source references still to model | Show the next read or question step |
 | Employee progress and completion | PostgreSQL | Tables to design | Employee ID and path ID, with step identity where needed | Progress is per employee; completion does not delete the shared team path | Resume, complete, and revisit affected steps |
