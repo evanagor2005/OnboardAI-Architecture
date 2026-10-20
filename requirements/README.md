@@ -22,6 +22,8 @@ Give each accepted requirement one clear obligation and a stable ID, such as `SR
 
 The team's requirements questionnaire is complete for this round. The shall statements remain drafts until team review and approval. The following choices are deliberately deferred to design or source selection:
 
+**Path-model revision needed:** The team has since chosen team-owned paths with per-employee progress and path visibility for all or designated team members. Path assignment does not narrow document access. This differs from the older employee-requested generation and post-completion path-deletion wording in the statement of work and requirements. See the [data model design](../design/02-data-and-database.md). Revise affected use cases, shall statements, and milestones after the remaining required/optional assignment detail is settled; do not treat the older wording as a final decision.
+
 - The team decided to retain a record identifying the employee and completed path, while deleting generated path content and step details. It deferred how to identify affected employees for later source-change cautions; no per-step history or completion-to-source association has been approved. The completion record's exact fields and retention period belong in design.
 - Access and refresh behavior for the website or wiki will be set when the exact second source is selected.
 - Invitation expiration duration, the test criterion for an obvious AI-inferred step, and evaluation thresholds belong in design.
