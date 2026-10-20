@@ -9,6 +9,7 @@ Start from [data and knowledge rules](../adr/02-data-and-knowledge.md), especial
 - Which stores serve records, document content, indexes, and temporary data?
 - What tables or collections, keys, indexes, and constraints implement the access patterns?
 - How are source versions, citations, permissions, migrations, deletion, and backup represented?
+- Can a document be associated with multiple teams, or with exactly one team or the company-wide shared category?
 
 ## Domain model
 
@@ -22,7 +23,7 @@ Start from [data and knowledge rules](../adr/02-data-and-knowledge.md), especial
 
 ## Chosen approach and rationale
 
-**Team design:**
+**Team design:** Team access classification applies to the whole document. Indexed sections or chunks derived from that document inherit its classification; different sections of one document will not be assigned different team access. Existing requirements also include company-wide shared documents. Whether one document may be associated with multiple teams remains open.
 
 **Serious alternatives and tradeoffs:**
 
@@ -30,4 +31,4 @@ Start from [data and knowledge rules](../adr/02-data-and-knowledge.md), especial
 
 **Editable schema diagram:**
 
-**Verification / open questions:**
+**Verification / open questions:** Verify that all retrieved chunks from a team document carry the document's team classification. Decide whether a document may be associated with multiple teams or must be either associated with one team or company-wide shared.
