@@ -18,10 +18,10 @@ Include MCP only if it is in the accepted prototype scope.
 
 ## Chosen approach and rationale
 
-**Team design:** Run MCP as a separate service, initially in a container managed by Docker Compose. The company chatbot connects directly using a token for the signed-in user; MCP verifies it before serving protected tools. The service uses OnboardAI's shared retrieval and authorization behavior, with the approved first-iteration chatbot access policy. Exact tools, transport, host platform, and token issuer remain open.
+**Team design:** Run MCP as a separate service using the official Python MCP SDK with Streamable HTTP, initially in a container managed by Docker Compose. The company chatbot connects directly using a token for the signed-in user; MCP verifies it before serving protected tools. The service uses OnboardAI's shared retrieval and authorization behavior, with the approved first-iteration chatbot access policy. Exact tools, host platform, and token issuer remain open. Compatibility and per-user authentication with the intended Claude and OpenAI clients remain to be tested. The MCP service exposes tools; any chatbot agent behavior belongs to its host, while OnboardAI's path-generation workflow is a separate design concern.
 
 **Serious alternatives and tradeoffs:** The team chose direct per-user token access over a Django gateway that forwards each chatbot request. Separate hosting provides an independent MCP endpoint and adds token verification, networking, and deployment work.
 
 **Sequence diagrams:** Chatbot obtains user token → calls MCP → MCP verifies token → authorization determines chatbot scope → retrieval returns source-backed result. Draw the detailed sequence after choosing the chatbot and issuer.
 
-**Verification / open questions:** Prove that the intended chatbot supports a separate MCP endpoint and sends a distinct user token. Test two users and rejected missing, expired, or invalid tokens. Confirm the MCP transport and registration process with the selected chatbot. Check the chatbot's own conversation-retention behavior; OnboardAI does not retain those questions or answers.
+**Verification / open questions:** Prove that each intended Claude and OpenAI client supports the Streamable HTTP endpoint and sends a distinct user token. Test two users and rejected missing, expired, or invalid tokens. Confirm registration and OAuth account linking with the selected clients. Check each chatbot's own conversation-retention behavior; OnboardAI does not retain those questions or answers.
